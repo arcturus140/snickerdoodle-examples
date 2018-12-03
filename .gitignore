@@ -55,3 +55,13 @@
 
 
 *.jou
+*.log
+*.str
+
+snickerdoodle-black/*/NONE/ps7_summary\.html
+snickerdoodle-black/*/NONE/ps7_summary\.html
+
+snickerdoodle-black/*/*\.cache/wt/
+snickerdoodle-black/*/*\.cache/wt/
+
+snickerdoodle-black/*/*\.runs/

@@ -1,8 +1,8 @@
-//Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-//Date        : Sat Jan 14 19:26:38 2017
-//Host        : WIN-MJ2I8SI0RJV running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2018.2.1 (lin64) Build 2288692 Thu Jul 26 18:23:50 MDT 2018
+//Date        : Mon Dec  3 14:38:23 2018
+//Host        : m running 64-bit Ubuntu 16.04.5 LTS
 //Command     : generate_target base_block_design_wrapper.bd
 //Design      : base_block_design_wrapper
 //Purpose     : IP block netlist
@@ -31,11 +31,11 @@ module base_block_design_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    gpio0_tri_io,
-    gpio1_tri_io,
-    gpio2_tri_io,
-    gpio3_tri_io,
-    gpio4_tri_io);
+    GPIO0_tri_io,
+    GPIO1_tri_io,
+    GPIO2_tri_io,
+    GPIO3_tri_io,
+    GPIO4_tri_io);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -57,11 +57,11 @@ module base_block_design_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  inout [24:0]gpio0_tri_io;
-  inout [24:0]gpio1_tri_io;
-  inout [24:0]gpio2_tri_io;
-  inout [24:0]gpio3_tri_io;
-  inout [24:0]gpio4_tri_io;
+  inout [24:0]GPIO0_tri_io;
+  inout [24:0]GPIO1_tri_io;
+  inout [24:0]GPIO2_tri_io;
+  inout [24:0]GPIO3_tri_io;
+  inout [24:0]GPIO4_tri_io;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -84,507 +84,1132 @@ module base_block_design_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]gpio0_tri_i_0;
-  wire [1:1]gpio0_tri_i_1;
-  wire [10:10]gpio0_tri_i_10;
-  wire [11:11]gpio0_tri_i_11;
-  wire [12:12]gpio0_tri_i_12;
-  wire [13:13]gpio0_tri_i_13;
-  wire [14:14]gpio0_tri_i_14;
-  wire [15:15]gpio0_tri_i_15;
-  wire [16:16]gpio0_tri_i_16;
-  wire [17:17]gpio0_tri_i_17;
-  wire [18:18]gpio0_tri_i_18;
-  wire [19:19]gpio0_tri_i_19;
-  wire [2:2]gpio0_tri_i_2;
-  wire [20:20]gpio0_tri_i_20;
-  wire [21:21]gpio0_tri_i_21;
-  wire [22:22]gpio0_tri_i_22;
-  wire [23:23]gpio0_tri_i_23;
-  wire [24:24]gpio0_tri_i_24;
-  wire [3:3]gpio0_tri_i_3;
-  wire [4:4]gpio0_tri_i_4;
-  wire [5:5]gpio0_tri_i_5;
-  wire [6:6]gpio0_tri_i_6;
-  wire [7:7]gpio0_tri_i_7;
-  wire [8:8]gpio0_tri_i_8;
-  wire [9:9]gpio0_tri_i_9;
-  wire [0:0]gpio0_tri_io_0;
-  wire [1:1]gpio0_tri_io_1;
-  wire [10:10]gpio0_tri_io_10;
-  wire [11:11]gpio0_tri_io_11;
-  wire [12:12]gpio0_tri_io_12;
-  wire [13:13]gpio0_tri_io_13;
-  wire [14:14]gpio0_tri_io_14;
-  wire [15:15]gpio0_tri_io_15;
-  wire [16:16]gpio0_tri_io_16;
-  wire [17:17]gpio0_tri_io_17;
-  wire [18:18]gpio0_tri_io_18;
-  wire [19:19]gpio0_tri_io_19;
-  wire [2:2]gpio0_tri_io_2;
-  wire [20:20]gpio0_tri_io_20;
-  wire [21:21]gpio0_tri_io_21;
-  wire [22:22]gpio0_tri_io_22;
-  wire [23:23]gpio0_tri_io_23;
-  wire [24:24]gpio0_tri_io_24;
-  wire [3:3]gpio0_tri_io_3;
-  wire [4:4]gpio0_tri_io_4;
-  wire [5:5]gpio0_tri_io_5;
-  wire [6:6]gpio0_tri_io_6;
-  wire [7:7]gpio0_tri_io_7;
-  wire [8:8]gpio0_tri_io_8;
-  wire [9:9]gpio0_tri_io_9;
-  wire [0:0]gpio0_tri_o_0;
-  wire [1:1]gpio0_tri_o_1;
-  wire [10:10]gpio0_tri_o_10;
-  wire [11:11]gpio0_tri_o_11;
-  wire [12:12]gpio0_tri_o_12;
-  wire [13:13]gpio0_tri_o_13;
-  wire [14:14]gpio0_tri_o_14;
-  wire [15:15]gpio0_tri_o_15;
-  wire [16:16]gpio0_tri_o_16;
-  wire [17:17]gpio0_tri_o_17;
-  wire [18:18]gpio0_tri_o_18;
-  wire [19:19]gpio0_tri_o_19;
-  wire [2:2]gpio0_tri_o_2;
-  wire [20:20]gpio0_tri_o_20;
-  wire [21:21]gpio0_tri_o_21;
-  wire [22:22]gpio0_tri_o_22;
-  wire [23:23]gpio0_tri_o_23;
-  wire [24:24]gpio0_tri_o_24;
-  wire [3:3]gpio0_tri_o_3;
-  wire [4:4]gpio0_tri_o_4;
-  wire [5:5]gpio0_tri_o_5;
-  wire [6:6]gpio0_tri_o_6;
-  wire [7:7]gpio0_tri_o_7;
-  wire [8:8]gpio0_tri_o_8;
-  wire [9:9]gpio0_tri_o_9;
-  wire [0:0]gpio0_tri_t_0;
-  wire [1:1]gpio0_tri_t_1;
-  wire [10:10]gpio0_tri_t_10;
-  wire [11:11]gpio0_tri_t_11;
-  wire [12:12]gpio0_tri_t_12;
-  wire [13:13]gpio0_tri_t_13;
-  wire [14:14]gpio0_tri_t_14;
-  wire [15:15]gpio0_tri_t_15;
-  wire [16:16]gpio0_tri_t_16;
-  wire [17:17]gpio0_tri_t_17;
-  wire [18:18]gpio0_tri_t_18;
-  wire [19:19]gpio0_tri_t_19;
-  wire [2:2]gpio0_tri_t_2;
-  wire [20:20]gpio0_tri_t_20;
-  wire [21:21]gpio0_tri_t_21;
-  wire [22:22]gpio0_tri_t_22;
-  wire [23:23]gpio0_tri_t_23;
-  wire [24:24]gpio0_tri_t_24;
-  wire [3:3]gpio0_tri_t_3;
-  wire [4:4]gpio0_tri_t_4;
-  wire [5:5]gpio0_tri_t_5;
-  wire [6:6]gpio0_tri_t_6;
-  wire [7:7]gpio0_tri_t_7;
-  wire [8:8]gpio0_tri_t_8;
-  wire [9:9]gpio0_tri_t_9;
-  wire [0:0]gpio1_tri_i_0;
-  wire [1:1]gpio1_tri_i_1;
-  wire [10:10]gpio1_tri_i_10;
-  wire [11:11]gpio1_tri_i_11;
-  wire [12:12]gpio1_tri_i_12;
-  wire [13:13]gpio1_tri_i_13;
-  wire [14:14]gpio1_tri_i_14;
-  wire [15:15]gpio1_tri_i_15;
-  wire [16:16]gpio1_tri_i_16;
-  wire [17:17]gpio1_tri_i_17;
-  wire [18:18]gpio1_tri_i_18;
-  wire [19:19]gpio1_tri_i_19;
-  wire [2:2]gpio1_tri_i_2;
-  wire [20:20]gpio1_tri_i_20;
-  wire [21:21]gpio1_tri_i_21;
-  wire [22:22]gpio1_tri_i_22;
-  wire [23:23]gpio1_tri_i_23;
-  wire [24:24]gpio1_tri_i_24;
-  wire [3:3]gpio1_tri_i_3;
-  wire [4:4]gpio1_tri_i_4;
-  wire [5:5]gpio1_tri_i_5;
-  wire [6:6]gpio1_tri_i_6;
-  wire [7:7]gpio1_tri_i_7;
-  wire [8:8]gpio1_tri_i_8;
-  wire [9:9]gpio1_tri_i_9;
-  wire [0:0]gpio1_tri_io_0;
-  wire [1:1]gpio1_tri_io_1;
-  wire [10:10]gpio1_tri_io_10;
-  wire [11:11]gpio1_tri_io_11;
-  wire [12:12]gpio1_tri_io_12;
-  wire [13:13]gpio1_tri_io_13;
-  wire [14:14]gpio1_tri_io_14;
-  wire [15:15]gpio1_tri_io_15;
-  wire [16:16]gpio1_tri_io_16;
-  wire [17:17]gpio1_tri_io_17;
-  wire [18:18]gpio1_tri_io_18;
-  wire [19:19]gpio1_tri_io_19;
-  wire [2:2]gpio1_tri_io_2;
-  wire [20:20]gpio1_tri_io_20;
-  wire [21:21]gpio1_tri_io_21;
-  wire [22:22]gpio1_tri_io_22;
-  wire [23:23]gpio1_tri_io_23;
-  wire [24:24]gpio1_tri_io_24;
-  wire [3:3]gpio1_tri_io_3;
-  wire [4:4]gpio1_tri_io_4;
-  wire [5:5]gpio1_tri_io_5;
-  wire [6:6]gpio1_tri_io_6;
-  wire [7:7]gpio1_tri_io_7;
-  wire [8:8]gpio1_tri_io_8;
-  wire [9:9]gpio1_tri_io_9;
-  wire [0:0]gpio1_tri_o_0;
-  wire [1:1]gpio1_tri_o_1;
-  wire [10:10]gpio1_tri_o_10;
-  wire [11:11]gpio1_tri_o_11;
-  wire [12:12]gpio1_tri_o_12;
-  wire [13:13]gpio1_tri_o_13;
-  wire [14:14]gpio1_tri_o_14;
-  wire [15:15]gpio1_tri_o_15;
-  wire [16:16]gpio1_tri_o_16;
-  wire [17:17]gpio1_tri_o_17;
-  wire [18:18]gpio1_tri_o_18;
-  wire [19:19]gpio1_tri_o_19;
-  wire [2:2]gpio1_tri_o_2;
-  wire [20:20]gpio1_tri_o_20;
-  wire [21:21]gpio1_tri_o_21;
-  wire [22:22]gpio1_tri_o_22;
-  wire [23:23]gpio1_tri_o_23;
-  wire [24:24]gpio1_tri_o_24;
-  wire [3:3]gpio1_tri_o_3;
-  wire [4:4]gpio1_tri_o_4;
-  wire [5:5]gpio1_tri_o_5;
-  wire [6:6]gpio1_tri_o_6;
-  wire [7:7]gpio1_tri_o_7;
-  wire [8:8]gpio1_tri_o_8;
-  wire [9:9]gpio1_tri_o_9;
-  wire [0:0]gpio1_tri_t_0;
-  wire [1:1]gpio1_tri_t_1;
-  wire [10:10]gpio1_tri_t_10;
-  wire [11:11]gpio1_tri_t_11;
-  wire [12:12]gpio1_tri_t_12;
-  wire [13:13]gpio1_tri_t_13;
-  wire [14:14]gpio1_tri_t_14;
-  wire [15:15]gpio1_tri_t_15;
-  wire [16:16]gpio1_tri_t_16;
-  wire [17:17]gpio1_tri_t_17;
-  wire [18:18]gpio1_tri_t_18;
-  wire [19:19]gpio1_tri_t_19;
-  wire [2:2]gpio1_tri_t_2;
-  wire [20:20]gpio1_tri_t_20;
-  wire [21:21]gpio1_tri_t_21;
-  wire [22:22]gpio1_tri_t_22;
-  wire [23:23]gpio1_tri_t_23;
-  wire [24:24]gpio1_tri_t_24;
-  wire [3:3]gpio1_tri_t_3;
-  wire [4:4]gpio1_tri_t_4;
-  wire [5:5]gpio1_tri_t_5;
-  wire [6:6]gpio1_tri_t_6;
-  wire [7:7]gpio1_tri_t_7;
-  wire [8:8]gpio1_tri_t_8;
-  wire [9:9]gpio1_tri_t_9;
-  wire [0:0]gpio2_tri_i_0;
-  wire [1:1]gpio2_tri_i_1;
-  wire [10:10]gpio2_tri_i_10;
-  wire [11:11]gpio2_tri_i_11;
-  wire [12:12]gpio2_tri_i_12;
-  wire [13:13]gpio2_tri_i_13;
-  wire [14:14]gpio2_tri_i_14;
-  wire [15:15]gpio2_tri_i_15;
-  wire [16:16]gpio2_tri_i_16;
-  wire [17:17]gpio2_tri_i_17;
-  wire [18:18]gpio2_tri_i_18;
-  wire [19:19]gpio2_tri_i_19;
-  wire [2:2]gpio2_tri_i_2;
-  wire [20:20]gpio2_tri_i_20;
-  wire [21:21]gpio2_tri_i_21;
-  wire [22:22]gpio2_tri_i_22;
-  wire [23:23]gpio2_tri_i_23;
-  wire [24:24]gpio2_tri_i_24;
-  wire [3:3]gpio2_tri_i_3;
-  wire [4:4]gpio2_tri_i_4;
-  wire [5:5]gpio2_tri_i_5;
-  wire [6:6]gpio2_tri_i_6;
-  wire [7:7]gpio2_tri_i_7;
-  wire [8:8]gpio2_tri_i_8;
-  wire [9:9]gpio2_tri_i_9;
-  wire [0:0]gpio2_tri_io_0;
-  wire [1:1]gpio2_tri_io_1;
-  wire [10:10]gpio2_tri_io_10;
-  wire [11:11]gpio2_tri_io_11;
-  wire [12:12]gpio2_tri_io_12;
-  wire [13:13]gpio2_tri_io_13;
-  wire [14:14]gpio2_tri_io_14;
-  wire [15:15]gpio2_tri_io_15;
-  wire [16:16]gpio2_tri_io_16;
-  wire [17:17]gpio2_tri_io_17;
-  wire [18:18]gpio2_tri_io_18;
-  wire [19:19]gpio2_tri_io_19;
-  wire [2:2]gpio2_tri_io_2;
-  wire [20:20]gpio2_tri_io_20;
-  wire [21:21]gpio2_tri_io_21;
-  wire [22:22]gpio2_tri_io_22;
-  wire [23:23]gpio2_tri_io_23;
-  wire [24:24]gpio2_tri_io_24;
-  wire [3:3]gpio2_tri_io_3;
-  wire [4:4]gpio2_tri_io_4;
-  wire [5:5]gpio2_tri_io_5;
-  wire [6:6]gpio2_tri_io_6;
-  wire [7:7]gpio2_tri_io_7;
-  wire [8:8]gpio2_tri_io_8;
-  wire [9:9]gpio2_tri_io_9;
-  wire [0:0]gpio2_tri_o_0;
-  wire [1:1]gpio2_tri_o_1;
-  wire [10:10]gpio2_tri_o_10;
-  wire [11:11]gpio2_tri_o_11;
-  wire [12:12]gpio2_tri_o_12;
-  wire [13:13]gpio2_tri_o_13;
-  wire [14:14]gpio2_tri_o_14;
-  wire [15:15]gpio2_tri_o_15;
-  wire [16:16]gpio2_tri_o_16;
-  wire [17:17]gpio2_tri_o_17;
-  wire [18:18]gpio2_tri_o_18;
-  wire [19:19]gpio2_tri_o_19;
-  wire [2:2]gpio2_tri_o_2;
-  wire [20:20]gpio2_tri_o_20;
-  wire [21:21]gpio2_tri_o_21;
-  wire [22:22]gpio2_tri_o_22;
-  wire [23:23]gpio2_tri_o_23;
-  wire [24:24]gpio2_tri_o_24;
-  wire [3:3]gpio2_tri_o_3;
-  wire [4:4]gpio2_tri_o_4;
-  wire [5:5]gpio2_tri_o_5;
-  wire [6:6]gpio2_tri_o_6;
-  wire [7:7]gpio2_tri_o_7;
-  wire [8:8]gpio2_tri_o_8;
-  wire [9:9]gpio2_tri_o_9;
-  wire [0:0]gpio2_tri_t_0;
-  wire [1:1]gpio2_tri_t_1;
-  wire [10:10]gpio2_tri_t_10;
-  wire [11:11]gpio2_tri_t_11;
-  wire [12:12]gpio2_tri_t_12;
-  wire [13:13]gpio2_tri_t_13;
-  wire [14:14]gpio2_tri_t_14;
-  wire [15:15]gpio2_tri_t_15;
-  wire [16:16]gpio2_tri_t_16;
-  wire [17:17]gpio2_tri_t_17;
-  wire [18:18]gpio2_tri_t_18;
-  wire [19:19]gpio2_tri_t_19;
-  wire [2:2]gpio2_tri_t_2;
-  wire [20:20]gpio2_tri_t_20;
-  wire [21:21]gpio2_tri_t_21;
-  wire [22:22]gpio2_tri_t_22;
-  wire [23:23]gpio2_tri_t_23;
-  wire [24:24]gpio2_tri_t_24;
-  wire [3:3]gpio2_tri_t_3;
-  wire [4:4]gpio2_tri_t_4;
-  wire [5:5]gpio2_tri_t_5;
-  wire [6:6]gpio2_tri_t_6;
-  wire [7:7]gpio2_tri_t_7;
-  wire [8:8]gpio2_tri_t_8;
-  wire [9:9]gpio2_tri_t_9;
-  wire [0:0]gpio3_tri_i_0;
-  wire [1:1]gpio3_tri_i_1;
-  wire [10:10]gpio3_tri_i_10;
-  wire [11:11]gpio3_tri_i_11;
-  wire [12:12]gpio3_tri_i_12;
-  wire [13:13]gpio3_tri_i_13;
-  wire [14:14]gpio3_tri_i_14;
-  wire [15:15]gpio3_tri_i_15;
-  wire [16:16]gpio3_tri_i_16;
-  wire [17:17]gpio3_tri_i_17;
-  wire [18:18]gpio3_tri_i_18;
-  wire [19:19]gpio3_tri_i_19;
-  wire [2:2]gpio3_tri_i_2;
-  wire [20:20]gpio3_tri_i_20;
-  wire [21:21]gpio3_tri_i_21;
-  wire [22:22]gpio3_tri_i_22;
-  wire [23:23]gpio3_tri_i_23;
-  wire [24:24]gpio3_tri_i_24;
-  wire [3:3]gpio3_tri_i_3;
-  wire [4:4]gpio3_tri_i_4;
-  wire [5:5]gpio3_tri_i_5;
-  wire [6:6]gpio3_tri_i_6;
-  wire [7:7]gpio3_tri_i_7;
-  wire [8:8]gpio3_tri_i_8;
-  wire [9:9]gpio3_tri_i_9;
-  wire [0:0]gpio3_tri_io_0;
-  wire [1:1]gpio3_tri_io_1;
-  wire [10:10]gpio3_tri_io_10;
-  wire [11:11]gpio3_tri_io_11;
-  wire [12:12]gpio3_tri_io_12;
-  wire [13:13]gpio3_tri_io_13;
-  wire [14:14]gpio3_tri_io_14;
-  wire [15:15]gpio3_tri_io_15;
-  wire [16:16]gpio3_tri_io_16;
-  wire [17:17]gpio3_tri_io_17;
-  wire [18:18]gpio3_tri_io_18;
-  wire [19:19]gpio3_tri_io_19;
-  wire [2:2]gpio3_tri_io_2;
-  wire [20:20]gpio3_tri_io_20;
-  wire [21:21]gpio3_tri_io_21;
-  wire [22:22]gpio3_tri_io_22;
-  wire [23:23]gpio3_tri_io_23;
-  wire [24:24]gpio3_tri_io_24;
-  wire [3:3]gpio3_tri_io_3;
-  wire [4:4]gpio3_tri_io_4;
-  wire [5:5]gpio3_tri_io_5;
-  wire [6:6]gpio3_tri_io_6;
-  wire [7:7]gpio3_tri_io_7;
-  wire [8:8]gpio3_tri_io_8;
-  wire [9:9]gpio3_tri_io_9;
-  wire [0:0]gpio3_tri_o_0;
-  wire [1:1]gpio3_tri_o_1;
-  wire [10:10]gpio3_tri_o_10;
-  wire [11:11]gpio3_tri_o_11;
-  wire [12:12]gpio3_tri_o_12;
-  wire [13:13]gpio3_tri_o_13;
-  wire [14:14]gpio3_tri_o_14;
-  wire [15:15]gpio3_tri_o_15;
-  wire [16:16]gpio3_tri_o_16;
-  wire [17:17]gpio3_tri_o_17;
-  wire [18:18]gpio3_tri_o_18;
-  wire [19:19]gpio3_tri_o_19;
-  wire [2:2]gpio3_tri_o_2;
-  wire [20:20]gpio3_tri_o_20;
-  wire [21:21]gpio3_tri_o_21;
-  wire [22:22]gpio3_tri_o_22;
-  wire [23:23]gpio3_tri_o_23;
-  wire [24:24]gpio3_tri_o_24;
-  wire [3:3]gpio3_tri_o_3;
-  wire [4:4]gpio3_tri_o_4;
-  wire [5:5]gpio3_tri_o_5;
-  wire [6:6]gpio3_tri_o_6;
-  wire [7:7]gpio3_tri_o_7;
-  wire [8:8]gpio3_tri_o_8;
-  wire [9:9]gpio3_tri_o_9;
-  wire [0:0]gpio3_tri_t_0;
-  wire [1:1]gpio3_tri_t_1;
-  wire [10:10]gpio3_tri_t_10;
-  wire [11:11]gpio3_tri_t_11;
-  wire [12:12]gpio3_tri_t_12;
-  wire [13:13]gpio3_tri_t_13;
-  wire [14:14]gpio3_tri_t_14;
-  wire [15:15]gpio3_tri_t_15;
-  wire [16:16]gpio3_tri_t_16;
-  wire [17:17]gpio3_tri_t_17;
-  wire [18:18]gpio3_tri_t_18;
-  wire [19:19]gpio3_tri_t_19;
-  wire [2:2]gpio3_tri_t_2;
-  wire [20:20]gpio3_tri_t_20;
-  wire [21:21]gpio3_tri_t_21;
-  wire [22:22]gpio3_tri_t_22;
-  wire [23:23]gpio3_tri_t_23;
-  wire [24:24]gpio3_tri_t_24;
-  wire [3:3]gpio3_tri_t_3;
-  wire [4:4]gpio3_tri_t_4;
-  wire [5:5]gpio3_tri_t_5;
-  wire [6:6]gpio3_tri_t_6;
-  wire [7:7]gpio3_tri_t_7;
-  wire [8:8]gpio3_tri_t_8;
-  wire [9:9]gpio3_tri_t_9;
-  wire [0:0]gpio4_tri_i_0;
-  wire [1:1]gpio4_tri_i_1;
-  wire [10:10]gpio4_tri_i_10;
-  wire [11:11]gpio4_tri_i_11;
-  wire [12:12]gpio4_tri_i_12;
-  wire [13:13]gpio4_tri_i_13;
-  wire [14:14]gpio4_tri_i_14;
-  wire [15:15]gpio4_tri_i_15;
-  wire [16:16]gpio4_tri_i_16;
-  wire [17:17]gpio4_tri_i_17;
-  wire [18:18]gpio4_tri_i_18;
-  wire [19:19]gpio4_tri_i_19;
-  wire [2:2]gpio4_tri_i_2;
-  wire [20:20]gpio4_tri_i_20;
-  wire [21:21]gpio4_tri_i_21;
-  wire [22:22]gpio4_tri_i_22;
-  wire [23:23]gpio4_tri_i_23;
-  wire [24:24]gpio4_tri_i_24;
-  wire [3:3]gpio4_tri_i_3;
-  wire [4:4]gpio4_tri_i_4;
-  wire [5:5]gpio4_tri_i_5;
-  wire [6:6]gpio4_tri_i_6;
-  wire [7:7]gpio4_tri_i_7;
-  wire [8:8]gpio4_tri_i_8;
-  wire [9:9]gpio4_tri_i_9;
-  wire [0:0]gpio4_tri_io_0;
-  wire [1:1]gpio4_tri_io_1;
-  wire [10:10]gpio4_tri_io_10;
-  wire [11:11]gpio4_tri_io_11;
-  wire [12:12]gpio4_tri_io_12;
-  wire [13:13]gpio4_tri_io_13;
-  wire [14:14]gpio4_tri_io_14;
-  wire [15:15]gpio4_tri_io_15;
-  wire [16:16]gpio4_tri_io_16;
-  wire [17:17]gpio4_tri_io_17;
-  wire [18:18]gpio4_tri_io_18;
-  wire [19:19]gpio4_tri_io_19;
-  wire [2:2]gpio4_tri_io_2;
-  wire [20:20]gpio4_tri_io_20;
-  wire [21:21]gpio4_tri_io_21;
-  wire [22:22]gpio4_tri_io_22;
-  wire [23:23]gpio4_tri_io_23;
-  wire [24:24]gpio4_tri_io_24;
-  wire [3:3]gpio4_tri_io_3;
-  wire [4:4]gpio4_tri_io_4;
-  wire [5:5]gpio4_tri_io_5;
-  wire [6:6]gpio4_tri_io_6;
-  wire [7:7]gpio4_tri_io_7;
-  wire [8:8]gpio4_tri_io_8;
-  wire [9:9]gpio4_tri_io_9;
-  wire [0:0]gpio4_tri_o_0;
-  wire [1:1]gpio4_tri_o_1;
-  wire [10:10]gpio4_tri_o_10;
-  wire [11:11]gpio4_tri_o_11;
-  wire [12:12]gpio4_tri_o_12;
-  wire [13:13]gpio4_tri_o_13;
-  wire [14:14]gpio4_tri_o_14;
-  wire [15:15]gpio4_tri_o_15;
-  wire [16:16]gpio4_tri_o_16;
-  wire [17:17]gpio4_tri_o_17;
-  wire [18:18]gpio4_tri_o_18;
-  wire [19:19]gpio4_tri_o_19;
-  wire [2:2]gpio4_tri_o_2;
-  wire [20:20]gpio4_tri_o_20;
-  wire [21:21]gpio4_tri_o_21;
-  wire [22:22]gpio4_tri_o_22;
-  wire [23:23]gpio4_tri_o_23;
-  wire [24:24]gpio4_tri_o_24;
-  wire [3:3]gpio4_tri_o_3;
-  wire [4:4]gpio4_tri_o_4;
-  wire [5:5]gpio4_tri_o_5;
-  wire [6:6]gpio4_tri_o_6;
-  wire [7:7]gpio4_tri_o_7;
-  wire [8:8]gpio4_tri_o_8;
-  wire [9:9]gpio4_tri_o_9;
-  wire [0:0]gpio4_tri_t_0;
-  wire [1:1]gpio4_tri_t_1;
-  wire [10:10]gpio4_tri_t_10;
-  wire [11:11]gpio4_tri_t_11;
-  wire [12:12]gpio4_tri_t_12;
-  wire [13:13]gpio4_tri_t_13;
-  wire [14:14]gpio4_tri_t_14;
-  wire [15:15]gpio4_tri_t_15;
-  wire [16:16]gpio4_tri_t_16;
-  wire [17:17]gpio4_tri_t_17;
-  wire [18:18]gpio4_tri_t_18;
-  wire [19:19]gpio4_tri_t_19;
-  wire [2:2]gpio4_tri_t_2;
-  wire [20:20]gpio4_tri_t_20;
-  wire [21:21]gpio4_tri_t_21;
-  wire [22:22]gpio4_tri_t_22;
-  wire [23:23]gpio4_tri_t_23;
-  wire [24:24]gpio4_tri_t_24;
-  wire [3:3]gpio4_tri_t_3;
-  wire [4:4]gpio4_tri_t_4;
-  wire [5:5]gpio4_tri_t_5;
-  wire [6:6]gpio4_tri_t_6;
-  wire [7:7]gpio4_tri_t_7;
-  wire [8:8]gpio4_tri_t_8;
-  wire [9:9]gpio4_tri_t_9;
+  wire [0:0]GPIO0_tri_i_0;
+  wire [1:1]GPIO0_tri_i_1;
+  wire [10:10]GPIO0_tri_i_10;
+  wire [11:11]GPIO0_tri_i_11;
+  wire [12:12]GPIO0_tri_i_12;
+  wire [13:13]GPIO0_tri_i_13;
+  wire [14:14]GPIO0_tri_i_14;
+  wire [15:15]GPIO0_tri_i_15;
+  wire [16:16]GPIO0_tri_i_16;
+  wire [17:17]GPIO0_tri_i_17;
+  wire [18:18]GPIO0_tri_i_18;
+  wire [19:19]GPIO0_tri_i_19;
+  wire [2:2]GPIO0_tri_i_2;
+  wire [20:20]GPIO0_tri_i_20;
+  wire [21:21]GPIO0_tri_i_21;
+  wire [22:22]GPIO0_tri_i_22;
+  wire [23:23]GPIO0_tri_i_23;
+  wire [24:24]GPIO0_tri_i_24;
+  wire [3:3]GPIO0_tri_i_3;
+  wire [4:4]GPIO0_tri_i_4;
+  wire [5:5]GPIO0_tri_i_5;
+  wire [6:6]GPIO0_tri_i_6;
+  wire [7:7]GPIO0_tri_i_7;
+  wire [8:8]GPIO0_tri_i_8;
+  wire [9:9]GPIO0_tri_i_9;
+  wire [0:0]GPIO0_tri_io_0;
+  wire [1:1]GPIO0_tri_io_1;
+  wire [10:10]GPIO0_tri_io_10;
+  wire [11:11]GPIO0_tri_io_11;
+  wire [12:12]GPIO0_tri_io_12;
+  wire [13:13]GPIO0_tri_io_13;
+  wire [14:14]GPIO0_tri_io_14;
+  wire [15:15]GPIO0_tri_io_15;
+  wire [16:16]GPIO0_tri_io_16;
+  wire [17:17]GPIO0_tri_io_17;
+  wire [18:18]GPIO0_tri_io_18;
+  wire [19:19]GPIO0_tri_io_19;
+  wire [2:2]GPIO0_tri_io_2;
+  wire [20:20]GPIO0_tri_io_20;
+  wire [21:21]GPIO0_tri_io_21;
+  wire [22:22]GPIO0_tri_io_22;
+  wire [23:23]GPIO0_tri_io_23;
+  wire [24:24]GPIO0_tri_io_24;
+  wire [3:3]GPIO0_tri_io_3;
+  wire [4:4]GPIO0_tri_io_4;
+  wire [5:5]GPIO0_tri_io_5;
+  wire [6:6]GPIO0_tri_io_6;
+  wire [7:7]GPIO0_tri_io_7;
+  wire [8:8]GPIO0_tri_io_8;
+  wire [9:9]GPIO0_tri_io_9;
+  wire [0:0]GPIO0_tri_o_0;
+  wire [1:1]GPIO0_tri_o_1;
+  wire [10:10]GPIO0_tri_o_10;
+  wire [11:11]GPIO0_tri_o_11;
+  wire [12:12]GPIO0_tri_o_12;
+  wire [13:13]GPIO0_tri_o_13;
+  wire [14:14]GPIO0_tri_o_14;
+  wire [15:15]GPIO0_tri_o_15;
+  wire [16:16]GPIO0_tri_o_16;
+  wire [17:17]GPIO0_tri_o_17;
+  wire [18:18]GPIO0_tri_o_18;
+  wire [19:19]GPIO0_tri_o_19;
+  wire [2:2]GPIO0_tri_o_2;
+  wire [20:20]GPIO0_tri_o_20;
+  wire [21:21]GPIO0_tri_o_21;
+  wire [22:22]GPIO0_tri_o_22;
+  wire [23:23]GPIO0_tri_o_23;
+  wire [24:24]GPIO0_tri_o_24;
+  wire [3:3]GPIO0_tri_o_3;
+  wire [4:4]GPIO0_tri_o_4;
+  wire [5:5]GPIO0_tri_o_5;
+  wire [6:6]GPIO0_tri_o_6;
+  wire [7:7]GPIO0_tri_o_7;
+  wire [8:8]GPIO0_tri_o_8;
+  wire [9:9]GPIO0_tri_o_9;
+  wire [0:0]GPIO0_tri_t_0;
+  wire [1:1]GPIO0_tri_t_1;
+  wire [10:10]GPIO0_tri_t_10;
+  wire [11:11]GPIO0_tri_t_11;
+  wire [12:12]GPIO0_tri_t_12;
+  wire [13:13]GPIO0_tri_t_13;
+  wire [14:14]GPIO0_tri_t_14;
+  wire [15:15]GPIO0_tri_t_15;
+  wire [16:16]GPIO0_tri_t_16;
+  wire [17:17]GPIO0_tri_t_17;
+  wire [18:18]GPIO0_tri_t_18;
+  wire [19:19]GPIO0_tri_t_19;
+  wire [2:2]GPIO0_tri_t_2;
+  wire [20:20]GPIO0_tri_t_20;
+  wire [21:21]GPIO0_tri_t_21;
+  wire [22:22]GPIO0_tri_t_22;
+  wire [23:23]GPIO0_tri_t_23;
+  wire [24:24]GPIO0_tri_t_24;
+  wire [3:3]GPIO0_tri_t_3;
+  wire [4:4]GPIO0_tri_t_4;
+  wire [5:5]GPIO0_tri_t_5;
+  wire [6:6]GPIO0_tri_t_6;
+  wire [7:7]GPIO0_tri_t_7;
+  wire [8:8]GPIO0_tri_t_8;
+  wire [9:9]GPIO0_tri_t_9;
+  wire [0:0]GPIO1_tri_i_0;
+  wire [1:1]GPIO1_tri_i_1;
+  wire [10:10]GPIO1_tri_i_10;
+  wire [11:11]GPIO1_tri_i_11;
+  wire [12:12]GPIO1_tri_i_12;
+  wire [13:13]GPIO1_tri_i_13;
+  wire [14:14]GPIO1_tri_i_14;
+  wire [15:15]GPIO1_tri_i_15;
+  wire [16:16]GPIO1_tri_i_16;
+  wire [17:17]GPIO1_tri_i_17;
+  wire [18:18]GPIO1_tri_i_18;
+  wire [19:19]GPIO1_tri_i_19;
+  wire [2:2]GPIO1_tri_i_2;
+  wire [20:20]GPIO1_tri_i_20;
+  wire [21:21]GPIO1_tri_i_21;
+  wire [22:22]GPIO1_tri_i_22;
+  wire [23:23]GPIO1_tri_i_23;
+  wire [24:24]GPIO1_tri_i_24;
+  wire [3:3]GPIO1_tri_i_3;
+  wire [4:4]GPIO1_tri_i_4;
+  wire [5:5]GPIO1_tri_i_5;
+  wire [6:6]GPIO1_tri_i_6;
+  wire [7:7]GPIO1_tri_i_7;
+  wire [8:8]GPIO1_tri_i_8;
+  wire [9:9]GPIO1_tri_i_9;
+  wire [0:0]GPIO1_tri_io_0;
+  wire [1:1]GPIO1_tri_io_1;
+  wire [10:10]GPIO1_tri_io_10;
+  wire [11:11]GPIO1_tri_io_11;
+  wire [12:12]GPIO1_tri_io_12;
+  wire [13:13]GPIO1_tri_io_13;
+  wire [14:14]GPIO1_tri_io_14;
+  wire [15:15]GPIO1_tri_io_15;
+  wire [16:16]GPIO1_tri_io_16;
+  wire [17:17]GPIO1_tri_io_17;
+  wire [18:18]GPIO1_tri_io_18;
+  wire [19:19]GPIO1_tri_io_19;
+  wire [2:2]GPIO1_tri_io_2;
+  wire [20:20]GPIO1_tri_io_20;
+  wire [21:21]GPIO1_tri_io_21;
+  wire [22:22]GPIO1_tri_io_22;
+  wire [23:23]GPIO1_tri_io_23;
+  wire [24:24]GPIO1_tri_io_24;
+  wire [3:3]GPIO1_tri_io_3;
+  wire [4:4]GPIO1_tri_io_4;
+  wire [5:5]GPIO1_tri_io_5;
+  wire [6:6]GPIO1_tri_io_6;
+  wire [7:7]GPIO1_tri_io_7;
+  wire [8:8]GPIO1_tri_io_8;
+  wire [9:9]GPIO1_tri_io_9;
+  wire [0:0]GPIO1_tri_o_0;
+  wire [1:1]GPIO1_tri_o_1;
+  wire [10:10]GPIO1_tri_o_10;
+  wire [11:11]GPIO1_tri_o_11;
+  wire [12:12]GPIO1_tri_o_12;
+  wire [13:13]GPIO1_tri_o_13;
+  wire [14:14]GPIO1_tri_o_14;
+  wire [15:15]GPIO1_tri_o_15;
+  wire [16:16]GPIO1_tri_o_16;
+  wire [17:17]GPIO1_tri_o_17;
+  wire [18:18]GPIO1_tri_o_18;
+  wire [19:19]GPIO1_tri_o_19;
+  wire [2:2]GPIO1_tri_o_2;
+  wire [20:20]GPIO1_tri_o_20;
+  wire [21:21]GPIO1_tri_o_21;
+  wire [22:22]GPIO1_tri_o_22;
+  wire [23:23]GPIO1_tri_o_23;
+  wire [24:24]GPIO1_tri_o_24;
+  wire [3:3]GPIO1_tri_o_3;
+  wire [4:4]GPIO1_tri_o_4;
+  wire [5:5]GPIO1_tri_o_5;
+  wire [6:6]GPIO1_tri_o_6;
+  wire [7:7]GPIO1_tri_o_7;
+  wire [8:8]GPIO1_tri_o_8;
+  wire [9:9]GPIO1_tri_o_9;
+  wire [0:0]GPIO1_tri_t_0;
+  wire [1:1]GPIO1_tri_t_1;
+  wire [10:10]GPIO1_tri_t_10;
+  wire [11:11]GPIO1_tri_t_11;
+  wire [12:12]GPIO1_tri_t_12;
+  wire [13:13]GPIO1_tri_t_13;
+  wire [14:14]GPIO1_tri_t_14;
+  wire [15:15]GPIO1_tri_t_15;
+  wire [16:16]GPIO1_tri_t_16;
+  wire [17:17]GPIO1_tri_t_17;
+  wire [18:18]GPIO1_tri_t_18;
+  wire [19:19]GPIO1_tri_t_19;
+  wire [2:2]GPIO1_tri_t_2;
+  wire [20:20]GPIO1_tri_t_20;
+  wire [21:21]GPIO1_tri_t_21;
+  wire [22:22]GPIO1_tri_t_22;
+  wire [23:23]GPIO1_tri_t_23;
+  wire [24:24]GPIO1_tri_t_24;
+  wire [3:3]GPIO1_tri_t_3;
+  wire [4:4]GPIO1_tri_t_4;
+  wire [5:5]GPIO1_tri_t_5;
+  wire [6:6]GPIO1_tri_t_6;
+  wire [7:7]GPIO1_tri_t_7;
+  wire [8:8]GPIO1_tri_t_8;
+  wire [9:9]GPIO1_tri_t_9;
+  wire [0:0]GPIO2_tri_i_0;
+  wire [1:1]GPIO2_tri_i_1;
+  wire [10:10]GPIO2_tri_i_10;
+  wire [11:11]GPIO2_tri_i_11;
+  wire [12:12]GPIO2_tri_i_12;
+  wire [13:13]GPIO2_tri_i_13;
+  wire [14:14]GPIO2_tri_i_14;
+  wire [15:15]GPIO2_tri_i_15;
+  wire [16:16]GPIO2_tri_i_16;
+  wire [17:17]GPIO2_tri_i_17;
+  wire [18:18]GPIO2_tri_i_18;
+  wire [19:19]GPIO2_tri_i_19;
+  wire [2:2]GPIO2_tri_i_2;
+  wire [20:20]GPIO2_tri_i_20;
+  wire [21:21]GPIO2_tri_i_21;
+  wire [22:22]GPIO2_tri_i_22;
+  wire [23:23]GPIO2_tri_i_23;
+  wire [24:24]GPIO2_tri_i_24;
+  wire [3:3]GPIO2_tri_i_3;
+  wire [4:4]GPIO2_tri_i_4;
+  wire [5:5]GPIO2_tri_i_5;
+  wire [6:6]GPIO2_tri_i_6;
+  wire [7:7]GPIO2_tri_i_7;
+  wire [8:8]GPIO2_tri_i_8;
+  wire [9:9]GPIO2_tri_i_9;
+  wire [0:0]GPIO2_tri_io_0;
+  wire [1:1]GPIO2_tri_io_1;
+  wire [10:10]GPIO2_tri_io_10;
+  wire [11:11]GPIO2_tri_io_11;
+  wire [12:12]GPIO2_tri_io_12;
+  wire [13:13]GPIO2_tri_io_13;
+  wire [14:14]GPIO2_tri_io_14;
+  wire [15:15]GPIO2_tri_io_15;
+  wire [16:16]GPIO2_tri_io_16;
+  wire [17:17]GPIO2_tri_io_17;
+  wire [18:18]GPIO2_tri_io_18;
+  wire [19:19]GPIO2_tri_io_19;
+  wire [2:2]GPIO2_tri_io_2;
+  wire [20:20]GPIO2_tri_io_20;
+  wire [21:21]GPIO2_tri_io_21;
+  wire [22:22]GPIO2_tri_io_22;
+  wire [23:23]GPIO2_tri_io_23;
+  wire [24:24]GPIO2_tri_io_24;
+  wire [3:3]GPIO2_tri_io_3;
+  wire [4:4]GPIO2_tri_io_4;
+  wire [5:5]GPIO2_tri_io_5;
+  wire [6:6]GPIO2_tri_io_6;
+  wire [7:7]GPIO2_tri_io_7;
+  wire [8:8]GPIO2_tri_io_8;
+  wire [9:9]GPIO2_tri_io_9;
+  wire [0:0]GPIO2_tri_o_0;
+  wire [1:1]GPIO2_tri_o_1;
+  wire [10:10]GPIO2_tri_o_10;
+  wire [11:11]GPIO2_tri_o_11;
+  wire [12:12]GPIO2_tri_o_12;
+  wire [13:13]GPIO2_tri_o_13;
+  wire [14:14]GPIO2_tri_o_14;
+  wire [15:15]GPIO2_tri_o_15;
+  wire [16:16]GPIO2_tri_o_16;
+  wire [17:17]GPIO2_tri_o_17;
+  wire [18:18]GPIO2_tri_o_18;
+  wire [19:19]GPIO2_tri_o_19;
+  wire [2:2]GPIO2_tri_o_2;
+  wire [20:20]GPIO2_tri_o_20;
+  wire [21:21]GPIO2_tri_o_21;
+  wire [22:22]GPIO2_tri_o_22;
+  wire [23:23]GPIO2_tri_o_23;
+  wire [24:24]GPIO2_tri_o_24;
+  wire [3:3]GPIO2_tri_o_3;
+  wire [4:4]GPIO2_tri_o_4;
+  wire [5:5]GPIO2_tri_o_5;
+  wire [6:6]GPIO2_tri_o_6;
+  wire [7:7]GPIO2_tri_o_7;
+  wire [8:8]GPIO2_tri_o_8;
+  wire [9:9]GPIO2_tri_o_9;
+  wire [0:0]GPIO2_tri_t_0;
+  wire [1:1]GPIO2_tri_t_1;
+  wire [10:10]GPIO2_tri_t_10;
+  wire [11:11]GPIO2_tri_t_11;
+  wire [12:12]GPIO2_tri_t_12;
+  wire [13:13]GPIO2_tri_t_13;
+  wire [14:14]GPIO2_tri_t_14;
+  wire [15:15]GPIO2_tri_t_15;
+  wire [16:16]GPIO2_tri_t_16;
+  wire [17:17]GPIO2_tri_t_17;
+  wire [18:18]GPIO2_tri_t_18;
+  wire [19:19]GPIO2_tri_t_19;
+  wire [2:2]GPIO2_tri_t_2;
+  wire [20:20]GPIO2_tri_t_20;
+  wire [21:21]GPIO2_tri_t_21;
+  wire [22:22]GPIO2_tri_t_22;
+  wire [23:23]GPIO2_tri_t_23;
+  wire [24:24]GPIO2_tri_t_24;
+  wire [3:3]GPIO2_tri_t_3;
+  wire [4:4]GPIO2_tri_t_4;
+  wire [5:5]GPIO2_tri_t_5;
+  wire [6:6]GPIO2_tri_t_6;
+  wire [7:7]GPIO2_tri_t_7;
+  wire [8:8]GPIO2_tri_t_8;
+  wire [9:9]GPIO2_tri_t_9;
+  wire [0:0]GPIO3_tri_i_0;
+  wire [1:1]GPIO3_tri_i_1;
+  wire [10:10]GPIO3_tri_i_10;
+  wire [11:11]GPIO3_tri_i_11;
+  wire [12:12]GPIO3_tri_i_12;
+  wire [13:13]GPIO3_tri_i_13;
+  wire [14:14]GPIO3_tri_i_14;
+  wire [15:15]GPIO3_tri_i_15;
+  wire [16:16]GPIO3_tri_i_16;
+  wire [17:17]GPIO3_tri_i_17;
+  wire [18:18]GPIO3_tri_i_18;
+  wire [19:19]GPIO3_tri_i_19;
+  wire [2:2]GPIO3_tri_i_2;
+  wire [20:20]GPIO3_tri_i_20;
+  wire [21:21]GPIO3_tri_i_21;
+  wire [22:22]GPIO3_tri_i_22;
+  wire [23:23]GPIO3_tri_i_23;
+  wire [24:24]GPIO3_tri_i_24;
+  wire [3:3]GPIO3_tri_i_3;
+  wire [4:4]GPIO3_tri_i_4;
+  wire [5:5]GPIO3_tri_i_5;
+  wire [6:6]GPIO3_tri_i_6;
+  wire [7:7]GPIO3_tri_i_7;
+  wire [8:8]GPIO3_tri_i_8;
+  wire [9:9]GPIO3_tri_i_9;
+  wire [0:0]GPIO3_tri_io_0;
+  wire [1:1]GPIO3_tri_io_1;
+  wire [10:10]GPIO3_tri_io_10;
+  wire [11:11]GPIO3_tri_io_11;
+  wire [12:12]GPIO3_tri_io_12;
+  wire [13:13]GPIO3_tri_io_13;
+  wire [14:14]GPIO3_tri_io_14;
+  wire [15:15]GPIO3_tri_io_15;
+  wire [16:16]GPIO3_tri_io_16;
+  wire [17:17]GPIO3_tri_io_17;
+  wire [18:18]GPIO3_tri_io_18;
+  wire [19:19]GPIO3_tri_io_19;
+  wire [2:2]GPIO3_tri_io_2;
+  wire [20:20]GPIO3_tri_io_20;
+  wire [21:21]GPIO3_tri_io_21;
+  wire [22:22]GPIO3_tri_io_22;
+  wire [23:23]GPIO3_tri_io_23;
+  wire [24:24]GPIO3_tri_io_24;
+  wire [3:3]GPIO3_tri_io_3;
+  wire [4:4]GPIO3_tri_io_4;
+  wire [5:5]GPIO3_tri_io_5;
+  wire [6:6]GPIO3_tri_io_6;
+  wire [7:7]GPIO3_tri_io_7;
+  wire [8:8]GPIO3_tri_io_8;
+  wire [9:9]GPIO3_tri_io_9;
+  wire [0:0]GPIO3_tri_o_0;
+  wire [1:1]GPIO3_tri_o_1;
+  wire [10:10]GPIO3_tri_o_10;
+  wire [11:11]GPIO3_tri_o_11;
+  wire [12:12]GPIO3_tri_o_12;
+  wire [13:13]GPIO3_tri_o_13;
+  wire [14:14]GPIO3_tri_o_14;
+  wire [15:15]GPIO3_tri_o_15;
+  wire [16:16]GPIO3_tri_o_16;
+  wire [17:17]GPIO3_tri_o_17;
+  wire [18:18]GPIO3_tri_o_18;
+  wire [19:19]GPIO3_tri_o_19;
+  wire [2:2]GPIO3_tri_o_2;
+  wire [20:20]GPIO3_tri_o_20;
+  wire [21:21]GPIO3_tri_o_21;
+  wire [22:22]GPIO3_tri_o_22;
+  wire [23:23]GPIO3_tri_o_23;
+  wire [24:24]GPIO3_tri_o_24;
+  wire [3:3]GPIO3_tri_o_3;
+  wire [4:4]GPIO3_tri_o_4;
+  wire [5:5]GPIO3_tri_o_5;
+  wire [6:6]GPIO3_tri_o_6;
+  wire [7:7]GPIO3_tri_o_7;
+  wire [8:8]GPIO3_tri_o_8;
+  wire [9:9]GPIO3_tri_o_9;
+  wire [0:0]GPIO3_tri_t_0;
+  wire [1:1]GPIO3_tri_t_1;
+  wire [10:10]GPIO3_tri_t_10;
+  wire [11:11]GPIO3_tri_t_11;
+  wire [12:12]GPIO3_tri_t_12;
+  wire [13:13]GPIO3_tri_t_13;
+  wire [14:14]GPIO3_tri_t_14;
+  wire [15:15]GPIO3_tri_t_15;
+  wire [16:16]GPIO3_tri_t_16;
+  wire [17:17]GPIO3_tri_t_17;
+  wire [18:18]GPIO3_tri_t_18;
+  wire [19:19]GPIO3_tri_t_19;
+  wire [2:2]GPIO3_tri_t_2;
+  wire [20:20]GPIO3_tri_t_20;
+  wire [21:21]GPIO3_tri_t_21;
+  wire [22:22]GPIO3_tri_t_22;
+  wire [23:23]GPIO3_tri_t_23;
+  wire [24:24]GPIO3_tri_t_24;
+  wire [3:3]GPIO3_tri_t_3;
+  wire [4:4]GPIO3_tri_t_4;
+  wire [5:5]GPIO3_tri_t_5;
+  wire [6:6]GPIO3_tri_t_6;
+  wire [7:7]GPIO3_tri_t_7;
+  wire [8:8]GPIO3_tri_t_8;
+  wire [9:9]GPIO3_tri_t_9;
+  wire [0:0]GPIO4_tri_i_0;
+  wire [1:1]GPIO4_tri_i_1;
+  wire [10:10]GPIO4_tri_i_10;
+  wire [11:11]GPIO4_tri_i_11;
+  wire [12:12]GPIO4_tri_i_12;
+  wire [13:13]GPIO4_tri_i_13;
+  wire [14:14]GPIO4_tri_i_14;
+  wire [15:15]GPIO4_tri_i_15;
+  wire [16:16]GPIO4_tri_i_16;
+  wire [17:17]GPIO4_tri_i_17;
+  wire [18:18]GPIO4_tri_i_18;
+  wire [19:19]GPIO4_tri_i_19;
+  wire [2:2]GPIO4_tri_i_2;
+  wire [20:20]GPIO4_tri_i_20;
+  wire [21:21]GPIO4_tri_i_21;
+  wire [22:22]GPIO4_tri_i_22;
+  wire [23:23]GPIO4_tri_i_23;
+  wire [24:24]GPIO4_tri_i_24;
+  wire [3:3]GPIO4_tri_i_3;
+  wire [4:4]GPIO4_tri_i_4;
+  wire [5:5]GPIO4_tri_i_5;
+  wire [6:6]GPIO4_tri_i_6;
+  wire [7:7]GPIO4_tri_i_7;
+  wire [8:8]GPIO4_tri_i_8;
+  wire [9:9]GPIO4_tri_i_9;
+  wire [0:0]GPIO4_tri_io_0;
+  wire [1:1]GPIO4_tri_io_1;
+  wire [10:10]GPIO4_tri_io_10;
+  wire [11:11]GPIO4_tri_io_11;
+  wire [12:12]GPIO4_tri_io_12;
+  wire [13:13]GPIO4_tri_io_13;
+  wire [14:14]GPIO4_tri_io_14;
+  wire [15:15]GPIO4_tri_io_15;
+  wire [16:16]GPIO4_tri_io_16;
+  wire [17:17]GPIO4_tri_io_17;
+  wire [18:18]GPIO4_tri_io_18;
+  wire [19:19]GPIO4_tri_io_19;
+  wire [2:2]GPIO4_tri_io_2;
+  wire [20:20]GPIO4_tri_io_20;
+  wire [21:21]GPIO4_tri_io_21;
+  wire [22:22]GPIO4_tri_io_22;
+  wire [23:23]GPIO4_tri_io_23;
+  wire [24:24]GPIO4_tri_io_24;
+  wire [3:3]GPIO4_tri_io_3;
+  wire [4:4]GPIO4_tri_io_4;
+  wire [5:5]GPIO4_tri_io_5;
+  wire [6:6]GPIO4_tri_io_6;
+  wire [7:7]GPIO4_tri_io_7;
+  wire [8:8]GPIO4_tri_io_8;
+  wire [9:9]GPIO4_tri_io_9;
+  wire [0:0]GPIO4_tri_o_0;
+  wire [1:1]GPIO4_tri_o_1;
+  wire [10:10]GPIO4_tri_o_10;
+  wire [11:11]GPIO4_tri_o_11;
+  wire [12:12]GPIO4_tri_o_12;
+  wire [13:13]GPIO4_tri_o_13;
+  wire [14:14]GPIO4_tri_o_14;
+  wire [15:15]GPIO4_tri_o_15;
+  wire [16:16]GPIO4_tri_o_16;
+  wire [17:17]GPIO4_tri_o_17;
+  wire [18:18]GPIO4_tri_o_18;
+  wire [19:19]GPIO4_tri_o_19;
+  wire [2:2]GPIO4_tri_o_2;
+  wire [20:20]GPIO4_tri_o_20;
+  wire [21:21]GPIO4_tri_o_21;
+  wire [22:22]GPIO4_tri_o_22;
+  wire [23:23]GPIO4_tri_o_23;
+  wire [24:24]GPIO4_tri_o_24;
+  wire [3:3]GPIO4_tri_o_3;
+  wire [4:4]GPIO4_tri_o_4;
+  wire [5:5]GPIO4_tri_o_5;
+  wire [6:6]GPIO4_tri_o_6;
+  wire [7:7]GPIO4_tri_o_7;
+  wire [8:8]GPIO4_tri_o_8;
+  wire [9:9]GPIO4_tri_o_9;
+  wire [0:0]GPIO4_tri_t_0;
+  wire [1:1]GPIO4_tri_t_1;
+  wire [10:10]GPIO4_tri_t_10;
+  wire [11:11]GPIO4_tri_t_11;
+  wire [12:12]GPIO4_tri_t_12;
+  wire [13:13]GPIO4_tri_t_13;
+  wire [14:14]GPIO4_tri_t_14;
+  wire [15:15]GPIO4_tri_t_15;
+  wire [16:16]GPIO4_tri_t_16;
+  wire [17:17]GPIO4_tri_t_17;
+  wire [18:18]GPIO4_tri_t_18;
+  wire [19:19]GPIO4_tri_t_19;
+  wire [2:2]GPIO4_tri_t_2;
+  wire [20:20]GPIO4_tri_t_20;
+  wire [21:21]GPIO4_tri_t_21;
+  wire [22:22]GPIO4_tri_t_22;
+  wire [23:23]GPIO4_tri_t_23;
+  wire [24:24]GPIO4_tri_t_24;
+  wire [3:3]GPIO4_tri_t_3;
+  wire [4:4]GPIO4_tri_t_4;
+  wire [5:5]GPIO4_tri_t_5;
+  wire [6:6]GPIO4_tri_t_6;
+  wire [7:7]GPIO4_tri_t_7;
+  wire [8:8]GPIO4_tri_t_8;
+  wire [9:9]GPIO4_tri_t_9;
 
+  IOBUF GPIO0_tri_iobuf_0
+       (.I(GPIO0_tri_o_0),
+        .IO(GPIO0_tri_io[0]),
+        .O(GPIO0_tri_i_0),
+        .T(GPIO0_tri_t_0));
+  IOBUF GPIO0_tri_iobuf_1
+       (.I(GPIO0_tri_o_1),
+        .IO(GPIO0_tri_io[1]),
+        .O(GPIO0_tri_i_1),
+        .T(GPIO0_tri_t_1));
+  IOBUF GPIO0_tri_iobuf_10
+       (.I(GPIO0_tri_o_10),
+        .IO(GPIO0_tri_io[10]),
+        .O(GPIO0_tri_i_10),
+        .T(GPIO0_tri_t_10));
+  IOBUF GPIO0_tri_iobuf_11
+       (.I(GPIO0_tri_o_11),
+        .IO(GPIO0_tri_io[11]),
+        .O(GPIO0_tri_i_11),
+        .T(GPIO0_tri_t_11));
+  IOBUF GPIO0_tri_iobuf_12
+       (.I(GPIO0_tri_o_12),
+        .IO(GPIO0_tri_io[12]),
+        .O(GPIO0_tri_i_12),
+        .T(GPIO0_tri_t_12));
+  IOBUF GPIO0_tri_iobuf_13
+       (.I(GPIO0_tri_o_13),
+        .IO(GPIO0_tri_io[13]),
+        .O(GPIO0_tri_i_13),
+        .T(GPIO0_tri_t_13));
+  IOBUF GPIO0_tri_iobuf_14
+       (.I(GPIO0_tri_o_14),
+        .IO(GPIO0_tri_io[14]),
+        .O(GPIO0_tri_i_14),
+        .T(GPIO0_tri_t_14));
+  IOBUF GPIO0_tri_iobuf_15
+       (.I(GPIO0_tri_o_15),
+        .IO(GPIO0_tri_io[15]),
+        .O(GPIO0_tri_i_15),
+        .T(GPIO0_tri_t_15));
+  IOBUF GPIO0_tri_iobuf_16
+       (.I(GPIO0_tri_o_16),
+        .IO(GPIO0_tri_io[16]),
+        .O(GPIO0_tri_i_16),
+        .T(GPIO0_tri_t_16));
+  IOBUF GPIO0_tri_iobuf_17
+       (.I(GPIO0_tri_o_17),
+        .IO(GPIO0_tri_io[17]),
+        .O(GPIO0_tri_i_17),
+        .T(GPIO0_tri_t_17));
+  IOBUF GPIO0_tri_iobuf_18
+       (.I(GPIO0_tri_o_18),
+        .IO(GPIO0_tri_io[18]),
+        .O(GPIO0_tri_i_18),
+        .T(GPIO0_tri_t_18));
+  IOBUF GPIO0_tri_iobuf_19
+       (.I(GPIO0_tri_o_19),
+        .IO(GPIO0_tri_io[19]),
+        .O(GPIO0_tri_i_19),
+        .T(GPIO0_tri_t_19));
+  IOBUF GPIO0_tri_iobuf_2
+       (.I(GPIO0_tri_o_2),
+        .IO(GPIO0_tri_io[2]),
+        .O(GPIO0_tri_i_2),
+        .T(GPIO0_tri_t_2));
+  IOBUF GPIO0_tri_iobuf_20
+       (.I(GPIO0_tri_o_20),
+        .IO(GPIO0_tri_io[20]),
+        .O(GPIO0_tri_i_20),
+        .T(GPIO0_tri_t_20));
+  IOBUF GPIO0_tri_iobuf_21
+       (.I(GPIO0_tri_o_21),
+        .IO(GPIO0_tri_io[21]),
+        .O(GPIO0_tri_i_21),
+        .T(GPIO0_tri_t_21));
+  IOBUF GPIO0_tri_iobuf_22
+       (.I(GPIO0_tri_o_22),
+        .IO(GPIO0_tri_io[22]),
+        .O(GPIO0_tri_i_22),
+        .T(GPIO0_tri_t_22));
+  IOBUF GPIO0_tri_iobuf_23
+       (.I(GPIO0_tri_o_23),
+        .IO(GPIO0_tri_io[23]),
+        .O(GPIO0_tri_i_23),
+        .T(GPIO0_tri_t_23));
+  IOBUF GPIO0_tri_iobuf_24
+       (.I(GPIO0_tri_o_24),
+        .IO(GPIO0_tri_io[24]),
+        .O(GPIO0_tri_i_24),
+        .T(GPIO0_tri_t_24));
+  IOBUF GPIO0_tri_iobuf_3
+       (.I(GPIO0_tri_o_3),
+        .IO(GPIO0_tri_io[3]),
+        .O(GPIO0_tri_i_3),
+        .T(GPIO0_tri_t_3));
+  IOBUF GPIO0_tri_iobuf_4
+       (.I(GPIO0_tri_o_4),
+        .IO(GPIO0_tri_io[4]),
+        .O(GPIO0_tri_i_4),
+        .T(GPIO0_tri_t_4));
+  IOBUF GPIO0_tri_iobuf_5
+       (.I(GPIO0_tri_o_5),
+        .IO(GPIO0_tri_io[5]),
+        .O(GPIO0_tri_i_5),
+        .T(GPIO0_tri_t_5));
+  IOBUF GPIO0_tri_iobuf_6
+       (.I(GPIO0_tri_o_6),
+        .IO(GPIO0_tri_io[6]),
+        .O(GPIO0_tri_i_6),
+        .T(GPIO0_tri_t_6));
+  IOBUF GPIO0_tri_iobuf_7
+       (.I(GPIO0_tri_o_7),
+        .IO(GPIO0_tri_io[7]),
+        .O(GPIO0_tri_i_7),
+        .T(GPIO0_tri_t_7));
+  IOBUF GPIO0_tri_iobuf_8
+       (.I(GPIO0_tri_o_8),
+        .IO(GPIO0_tri_io[8]),
+        .O(GPIO0_tri_i_8),
+        .T(GPIO0_tri_t_8));
+  IOBUF GPIO0_tri_iobuf_9
+       (.I(GPIO0_tri_o_9),
+        .IO(GPIO0_tri_io[9]),
+        .O(GPIO0_tri_i_9),
+        .T(GPIO0_tri_t_9));
+  IOBUF GPIO1_tri_iobuf_0
+       (.I(GPIO1_tri_o_0),
+        .IO(GPIO1_tri_io[0]),
+        .O(GPIO1_tri_i_0),
+        .T(GPIO1_tri_t_0));
+  IOBUF GPIO1_tri_iobuf_1
+       (.I(GPIO1_tri_o_1),
+        .IO(GPIO1_tri_io[1]),
+        .O(GPIO1_tri_i_1),
+        .T(GPIO1_tri_t_1));
+  IOBUF GPIO1_tri_iobuf_10
+       (.I(GPIO1_tri_o_10),
+        .IO(GPIO1_tri_io[10]),
+        .O(GPIO1_tri_i_10),
+        .T(GPIO1_tri_t_10));
+  IOBUF GPIO1_tri_iobuf_11
+       (.I(GPIO1_tri_o_11),
+        .IO(GPIO1_tri_io[11]),
+        .O(GPIO1_tri_i_11),
+        .T(GPIO1_tri_t_11));
+  IOBUF GPIO1_tri_iobuf_12
+       (.I(GPIO1_tri_o_12),
+        .IO(GPIO1_tri_io[12]),
+        .O(GPIO1_tri_i_12),
+        .T(GPIO1_tri_t_12));
+  IOBUF GPIO1_tri_iobuf_13
+       (.I(GPIO1_tri_o_13),
+        .IO(GPIO1_tri_io[13]),
+        .O(GPIO1_tri_i_13),
+        .T(GPIO1_tri_t_13));
+  IOBUF GPIO1_tri_iobuf_14
+       (.I(GPIO1_tri_o_14),
+        .IO(GPIO1_tri_io[14]),
+        .O(GPIO1_tri_i_14),
+        .T(GPIO1_tri_t_14));
+  IOBUF GPIO1_tri_iobuf_15
+       (.I(GPIO1_tri_o_15),
+        .IO(GPIO1_tri_io[15]),
+        .O(GPIO1_tri_i_15),
+        .T(GPIO1_tri_t_15));
+  IOBUF GPIO1_tri_iobuf_16
+       (.I(GPIO1_tri_o_16),
+        .IO(GPIO1_tri_io[16]),
+        .O(GPIO1_tri_i_16),
+        .T(GPIO1_tri_t_16));
+  IOBUF GPIO1_tri_iobuf_17
+       (.I(GPIO1_tri_o_17),
+        .IO(GPIO1_tri_io[17]),
+        .O(GPIO1_tri_i_17),
+        .T(GPIO1_tri_t_17));
+  IOBUF GPIO1_tri_iobuf_18
+       (.I(GPIO1_tri_o_18),
+        .IO(GPIO1_tri_io[18]),
+        .O(GPIO1_tri_i_18),
+        .T(GPIO1_tri_t_18));
+  IOBUF GPIO1_tri_iobuf_19
+       (.I(GPIO1_tri_o_19),
+        .IO(GPIO1_tri_io[19]),
+        .O(GPIO1_tri_i_19),
+        .T(GPIO1_tri_t_19));
+  IOBUF GPIO1_tri_iobuf_2
+       (.I(GPIO1_tri_o_2),
+        .IO(GPIO1_tri_io[2]),
+        .O(GPIO1_tri_i_2),
+        .T(GPIO1_tri_t_2));
+  IOBUF GPIO1_tri_iobuf_20
+       (.I(GPIO1_tri_o_20),
+        .IO(GPIO1_tri_io[20]),
+        .O(GPIO1_tri_i_20),
+        .T(GPIO1_tri_t_20));
+  IOBUF GPIO1_tri_iobuf_21
+       (.I(GPIO1_tri_o_21),
+        .IO(GPIO1_tri_io[21]),
+        .O(GPIO1_tri_i_21),
+        .T(GPIO1_tri_t_21));
+  IOBUF GPIO1_tri_iobuf_22
+       (.I(GPIO1_tri_o_22),
+        .IO(GPIO1_tri_io[22]),
+        .O(GPIO1_tri_i_22),
+        .T(GPIO1_tri_t_22));
+  IOBUF GPIO1_tri_iobuf_23
+       (.I(GPIO1_tri_o_23),
+        .IO(GPIO1_tri_io[23]),
+        .O(GPIO1_tri_i_23),
+        .T(GPIO1_tri_t_23));
+  IOBUF GPIO1_tri_iobuf_24
+       (.I(GPIO1_tri_o_24),
+        .IO(GPIO1_tri_io[24]),
+        .O(GPIO1_tri_i_24),
+        .T(GPIO1_tri_t_24));
+  IOBUF GPIO1_tri_iobuf_3
+       (.I(GPIO1_tri_o_3),
+        .IO(GPIO1_tri_io[3]),
+        .O(GPIO1_tri_i_3),
+        .T(GPIO1_tri_t_3));
+  IOBUF GPIO1_tri_iobuf_4
+       (.I(GPIO1_tri_o_4),
+        .IO(GPIO1_tri_io[4]),
+        .O(GPIO1_tri_i_4),
+        .T(GPIO1_tri_t_4));
+  IOBUF GPIO1_tri_iobuf_5
+       (.I(GPIO1_tri_o_5),
+        .IO(GPIO1_tri_io[5]),
+        .O(GPIO1_tri_i_5),
+        .T(GPIO1_tri_t_5));
+  IOBUF GPIO1_tri_iobuf_6
+       (.I(GPIO1_tri_o_6),
+        .IO(GPIO1_tri_io[6]),
+        .O(GPIO1_tri_i_6),
+        .T(GPIO1_tri_t_6));
+  IOBUF GPIO1_tri_iobuf_7
+       (.I(GPIO1_tri_o_7),
+        .IO(GPIO1_tri_io[7]),
+        .O(GPIO1_tri_i_7),
+        .T(GPIO1_tri_t_7));
+  IOBUF GPIO1_tri_iobuf_8
+       (.I(GPIO1_tri_o_8),
+        .IO(GPIO1_tri_io[8]),
+        .O(GPIO1_tri_i_8),
+        .T(GPIO1_tri_t_8));
+  IOBUF GPIO1_tri_iobuf_9
+       (.I(GPIO1_tri_o_9),
+        .IO(GPIO1_tri_io[9]),
+        .O(GPIO1_tri_i_9),
+        .T(GPIO1_tri_t_9));
+  IOBUF GPIO2_tri_iobuf_0
+       (.I(GPIO2_tri_o_0),
+        .IO(GPIO2_tri_io[0]),
+        .O(GPIO2_tri_i_0),
+        .T(GPIO2_tri_t_0));
+  IOBUF GPIO2_tri_iobuf_1
+       (.I(GPIO2_tri_o_1),
+        .IO(GPIO2_tri_io[1]),
+        .O(GPIO2_tri_i_1),
+        .T(GPIO2_tri_t_1));
+  IOBUF GPIO2_tri_iobuf_10
+       (.I(GPIO2_tri_o_10),
+        .IO(GPIO2_tri_io[10]),
+        .O(GPIO2_tri_i_10),
+        .T(GPIO2_tri_t_10));
+  IOBUF GPIO2_tri_iobuf_11
+       (.I(GPIO2_tri_o_11),
+        .IO(GPIO2_tri_io[11]),
+        .O(GPIO2_tri_i_11),
+        .T(GPIO2_tri_t_11));
+  IOBUF GPIO2_tri_iobuf_12
+       (.I(GPIO2_tri_o_12),
+        .IO(GPIO2_tri_io[12]),
+        .O(GPIO2_tri_i_12),
+        .T(GPIO2_tri_t_12));
+  IOBUF GPIO2_tri_iobuf_13
+       (.I(GPIO2_tri_o_13),
+        .IO(GPIO2_tri_io[13]),
+        .O(GPIO2_tri_i_13),
+        .T(GPIO2_tri_t_13));
+  IOBUF GPIO2_tri_iobuf_14
+       (.I(GPIO2_tri_o_14),
+        .IO(GPIO2_tri_io[14]),
+        .O(GPIO2_tri_i_14),
+        .T(GPIO2_tri_t_14));
+  IOBUF GPIO2_tri_iobuf_15
+       (.I(GPIO2_tri_o_15),
+        .IO(GPIO2_tri_io[15]),
+        .O(GPIO2_tri_i_15),
+        .T(GPIO2_tri_t_15));
+  IOBUF GPIO2_tri_iobuf_16
+       (.I(GPIO2_tri_o_16),
+        .IO(GPIO2_tri_io[16]),
+        .O(GPIO2_tri_i_16),
+        .T(GPIO2_tri_t_16));
+  IOBUF GPIO2_tri_iobuf_17
+       (.I(GPIO2_tri_o_17),
+        .IO(GPIO2_tri_io[17]),
+        .O(GPIO2_tri_i_17),
+        .T(GPIO2_tri_t_17));
+  IOBUF GPIO2_tri_iobuf_18
+       (.I(GPIO2_tri_o_18),
+        .IO(GPIO2_tri_io[18]),
+        .O(GPIO2_tri_i_18),
+        .T(GPIO2_tri_t_18));
+  IOBUF GPIO2_tri_iobuf_19
+       (.I(GPIO2_tri_o_19),
+        .IO(GPIO2_tri_io[19]),
+        .O(GPIO2_tri_i_19),
+        .T(GPIO2_tri_t_19));
+  IOBUF GPIO2_tri_iobuf_2
+       (.I(GPIO2_tri_o_2),
+        .IO(GPIO2_tri_io[2]),
+        .O(GPIO2_tri_i_2),
+        .T(GPIO2_tri_t_2));
+  IOBUF GPIO2_tri_iobuf_20
+       (.I(GPIO2_tri_o_20),
+        .IO(GPIO2_tri_io[20]),
+        .O(GPIO2_tri_i_20),
+        .T(GPIO2_tri_t_20));
+  IOBUF GPIO2_tri_iobuf_21
+       (.I(GPIO2_tri_o_21),
+        .IO(GPIO2_tri_io[21]),
+        .O(GPIO2_tri_i_21),
+        .T(GPIO2_tri_t_21));
+  IOBUF GPIO2_tri_iobuf_22
+       (.I(GPIO2_tri_o_22),
+        .IO(GPIO2_tri_io[22]),
+        .O(GPIO2_tri_i_22),
+        .T(GPIO2_tri_t_22));
+  IOBUF GPIO2_tri_iobuf_23
+       (.I(GPIO2_tri_o_23),
+        .IO(GPIO2_tri_io[23]),
+        .O(GPIO2_tri_i_23),
+        .T(GPIO2_tri_t_23));
+  IOBUF GPIO2_tri_iobuf_24
+       (.I(GPIO2_tri_o_24),
+        .IO(GPIO2_tri_io[24]),
+        .O(GPIO2_tri_i_24),
+        .T(GPIO2_tri_t_24));
+  IOBUF GPIO2_tri_iobuf_3
+       (.I(GPIO2_tri_o_3),
+        .IO(GPIO2_tri_io[3]),
+        .O(GPIO2_tri_i_3),
+        .T(GPIO2_tri_t_3));
+  IOBUF GPIO2_tri_iobuf_4
+       (.I(GPIO2_tri_o_4),
+        .IO(GPIO2_tri_io[4]),
+        .O(GPIO2_tri_i_4),
+        .T(GPIO2_tri_t_4));
+  IOBUF GPIO2_tri_iobuf_5
+       (.I(GPIO2_tri_o_5),
+        .IO(GPIO2_tri_io[5]),
+        .O(GPIO2_tri_i_5),
+        .T(GPIO2_tri_t_5));
+  IOBUF GPIO2_tri_iobuf_6
+       (.I(GPIO2_tri_o_6),
+        .IO(GPIO2_tri_io[6]),
+        .O(GPIO2_tri_i_6),
+        .T(GPIO2_tri_t_6));
+  IOBUF GPIO2_tri_iobuf_7
+       (.I(GPIO2_tri_o_7),
+        .IO(GPIO2_tri_io[7]),
+        .O(GPIO2_tri_i_7),
+        .T(GPIO2_tri_t_7));
+  IOBUF GPIO2_tri_iobuf_8
+       (.I(GPIO2_tri_o_8),
+        .IO(GPIO2_tri_io[8]),
+        .O(GPIO2_tri_i_8),
+        .T(GPIO2_tri_t_8));
+  IOBUF GPIO2_tri_iobuf_9
+       (.I(GPIO2_tri_o_9),
+        .IO(GPIO2_tri_io[9]),
+        .O(GPIO2_tri_i_9),
+        .T(GPIO2_tri_t_9));
+  IOBUF GPIO3_tri_iobuf_0
+       (.I(GPIO3_tri_o_0),
+        .IO(GPIO3_tri_io[0]),
+        .O(GPIO3_tri_i_0),
+        .T(GPIO3_tri_t_0));
+  IOBUF GPIO3_tri_iobuf_1
+       (.I(GPIO3_tri_o_1),
+        .IO(GPIO3_tri_io[1]),
+        .O(GPIO3_tri_i_1),
+        .T(GPIO3_tri_t_1));
+  IOBUF GPIO3_tri_iobuf_10
+       (.I(GPIO3_tri_o_10),
+        .IO(GPIO3_tri_io[10]),
+        .O(GPIO3_tri_i_10),
+        .T(GPIO3_tri_t_10));
+  IOBUF GPIO3_tri_iobuf_11
+       (.I(GPIO3_tri_o_11),
+        .IO(GPIO3_tri_io[11]),
+        .O(GPIO3_tri_i_11),
+        .T(GPIO3_tri_t_11));
+  IOBUF GPIO3_tri_iobuf_12
+       (.I(GPIO3_tri_o_12),
+        .IO(GPIO3_tri_io[12]),
+        .O(GPIO3_tri_i_12),
+        .T(GPIO3_tri_t_12));
+  IOBUF GPIO3_tri_iobuf_13
+       (.I(GPIO3_tri_o_13),
+        .IO(GPIO3_tri_io[13]),
+        .O(GPIO3_tri_i_13),
+        .T(GPIO3_tri_t_13));
+  IOBUF GPIO3_tri_iobuf_14
+       (.I(GPIO3_tri_o_14),
+        .IO(GPIO3_tri_io[14]),
+        .O(GPIO3_tri_i_14),
+        .T(GPIO3_tri_t_14));
+  IOBUF GPIO3_tri_iobuf_15
+       (.I(GPIO3_tri_o_15),
+        .IO(GPIO3_tri_io[15]),
+        .O(GPIO3_tri_i_15),
+        .T(GPIO3_tri_t_15));
+  IOBUF GPIO3_tri_iobuf_16
+       (.I(GPIO3_tri_o_16),
+        .IO(GPIO3_tri_io[16]),
+        .O(GPIO3_tri_i_16),
+        .T(GPIO3_tri_t_16));
+  IOBUF GPIO3_tri_iobuf_17
+       (.I(GPIO3_tri_o_17),
+        .IO(GPIO3_tri_io[17]),
+        .O(GPIO3_tri_i_17),
+        .T(GPIO3_tri_t_17));
+  IOBUF GPIO3_tri_iobuf_18
+       (.I(GPIO3_tri_o_18),
+        .IO(GPIO3_tri_io[18]),
+        .O(GPIO3_tri_i_18),
+        .T(GPIO3_tri_t_18));
+  IOBUF GPIO3_tri_iobuf_19
+       (.I(GPIO3_tri_o_19),
+        .IO(GPIO3_tri_io[19]),
+        .O(GPIO3_tri_i_19),
+        .T(GPIO3_tri_t_19));
+  IOBUF GPIO3_tri_iobuf_2
+       (.I(GPIO3_tri_o_2),
+        .IO(GPIO3_tri_io[2]),
+        .O(GPIO3_tri_i_2),
+        .T(GPIO3_tri_t_2));
+  IOBUF GPIO3_tri_iobuf_20
+       (.I(GPIO3_tri_o_20),
+        .IO(GPIO3_tri_io[20]),
+        .O(GPIO3_tri_i_20),
+        .T(GPIO3_tri_t_20));
+  IOBUF GPIO3_tri_iobuf_21
+       (.I(GPIO3_tri_o_21),
+        .IO(GPIO3_tri_io[21]),
+        .O(GPIO3_tri_i_21),
+        .T(GPIO3_tri_t_21));
+  IOBUF GPIO3_tri_iobuf_22
+       (.I(GPIO3_tri_o_22),
+        .IO(GPIO3_tri_io[22]),
+        .O(GPIO3_tri_i_22),
+        .T(GPIO3_tri_t_22));
+  IOBUF GPIO3_tri_iobuf_23
+       (.I(GPIO3_tri_o_23),
+        .IO(GPIO3_tri_io[23]),
+        .O(GPIO3_tri_i_23),
+        .T(GPIO3_tri_t_23));
+  IOBUF GPIO3_tri_iobuf_24
+       (.I(GPIO3_tri_o_24),
+        .IO(GPIO3_tri_io[24]),
+        .O(GPIO3_tri_i_24),
+        .T(GPIO3_tri_t_24));
+  IOBUF GPIO3_tri_iobuf_3
+       (.I(GPIO3_tri_o_3),
+        .IO(GPIO3_tri_io[3]),
+        .O(GPIO3_tri_i_3),
+        .T(GPIO3_tri_t_3));
+  IOBUF GPIO3_tri_iobuf_4
+       (.I(GPIO3_tri_o_4),
+        .IO(GPIO3_tri_io[4]),
+        .O(GPIO3_tri_i_4),
+        .T(GPIO3_tri_t_4));
+  IOBUF GPIO3_tri_iobuf_5
+       (.I(GPIO3_tri_o_5),
+        .IO(GPIO3_tri_io[5]),
+        .O(GPIO3_tri_i_5),
+        .T(GPIO3_tri_t_5));
+  IOBUF GPIO3_tri_iobuf_6
+       (.I(GPIO3_tri_o_6),
+        .IO(GPIO3_tri_io[6]),
+        .O(GPIO3_tri_i_6),
+        .T(GPIO3_tri_t_6));
+  IOBUF GPIO3_tri_iobuf_7
+       (.I(GPIO3_tri_o_7),
+        .IO(GPIO3_tri_io[7]),
+        .O(GPIO3_tri_i_7),
+        .T(GPIO3_tri_t_7));
+  IOBUF GPIO3_tri_iobuf_8
+       (.I(GPIO3_tri_o_8),
+        .IO(GPIO3_tri_io[8]),
+        .O(GPIO3_tri_i_8),
+        .T(GPIO3_tri_t_8));
+  IOBUF GPIO3_tri_iobuf_9
+       (.I(GPIO3_tri_o_9),
+        .IO(GPIO3_tri_io[9]),
+        .O(GPIO3_tri_i_9),
+        .T(GPIO3_tri_t_9));
+  IOBUF GPIO4_tri_iobuf_0
+       (.I(GPIO4_tri_o_0),
+        .IO(GPIO4_tri_io[0]),
+        .O(GPIO4_tri_i_0),
+        .T(GPIO4_tri_t_0));
+  IOBUF GPIO4_tri_iobuf_1
+       (.I(GPIO4_tri_o_1),
+        .IO(GPIO4_tri_io[1]),
+        .O(GPIO4_tri_i_1),
+        .T(GPIO4_tri_t_1));
+  IOBUF GPIO4_tri_iobuf_10
+       (.I(GPIO4_tri_o_10),
+        .IO(GPIO4_tri_io[10]),
+        .O(GPIO4_tri_i_10),
+        .T(GPIO4_tri_t_10));
+  IOBUF GPIO4_tri_iobuf_11
+       (.I(GPIO4_tri_o_11),
+        .IO(GPIO4_tri_io[11]),
+        .O(GPIO4_tri_i_11),
+        .T(GPIO4_tri_t_11));
+  IOBUF GPIO4_tri_iobuf_12
+       (.I(GPIO4_tri_o_12),
+        .IO(GPIO4_tri_io[12]),
+        .O(GPIO4_tri_i_12),
+        .T(GPIO4_tri_t_12));
+  IOBUF GPIO4_tri_iobuf_13
+       (.I(GPIO4_tri_o_13),
+        .IO(GPIO4_tri_io[13]),
+        .O(GPIO4_tri_i_13),
+        .T(GPIO4_tri_t_13));
+  IOBUF GPIO4_tri_iobuf_14
+       (.I(GPIO4_tri_o_14),
+        .IO(GPIO4_tri_io[14]),
+        .O(GPIO4_tri_i_14),
+        .T(GPIO4_tri_t_14));
+  IOBUF GPIO4_tri_iobuf_15
+       (.I(GPIO4_tri_o_15),
+        .IO(GPIO4_tri_io[15]),
+        .O(GPIO4_tri_i_15),
+        .T(GPIO4_tri_t_15));
+  IOBUF GPIO4_tri_iobuf_16
+       (.I(GPIO4_tri_o_16),
+        .IO(GPIO4_tri_io[16]),
+        .O(GPIO4_tri_i_16),
+        .T(GPIO4_tri_t_16));
+  IOBUF GPIO4_tri_iobuf_17
+       (.I(GPIO4_tri_o_17),
+        .IO(GPIO4_tri_io[17]),
+        .O(GPIO4_tri_i_17),
+        .T(GPIO4_tri_t_17));
+  IOBUF GPIO4_tri_iobuf_18
+       (.I(GPIO4_tri_o_18),
+        .IO(GPIO4_tri_io[18]),
+        .O(GPIO4_tri_i_18),
+        .T(GPIO4_tri_t_18));
+  IOBUF GPIO4_tri_iobuf_19
+       (.I(GPIO4_tri_o_19),
+        .IO(GPIO4_tri_io[19]),
+        .O(GPIO4_tri_i_19),
+        .T(GPIO4_tri_t_19));
+  IOBUF GPIO4_tri_iobuf_2
+       (.I(GPIO4_tri_o_2),
+        .IO(GPIO4_tri_io[2]),
+        .O(GPIO4_tri_i_2),
+        .T(GPIO4_tri_t_2));
+  IOBUF GPIO4_tri_iobuf_20
+       (.I(GPIO4_tri_o_20),
+        .IO(GPIO4_tri_io[20]),
+        .O(GPIO4_tri_i_20),
+        .T(GPIO4_tri_t_20));
+  IOBUF GPIO4_tri_iobuf_21
+       (.I(GPIO4_tri_o_21),
+        .IO(GPIO4_tri_io[21]),
+        .O(GPIO4_tri_i_21),
+        .T(GPIO4_tri_t_21));
+  IOBUF GPIO4_tri_iobuf_22
+       (.I(GPIO4_tri_o_22),
+        .IO(GPIO4_tri_io[22]),
+        .O(GPIO4_tri_i_22),
+        .T(GPIO4_tri_t_22));
+  IOBUF GPIO4_tri_iobuf_23
+       (.I(GPIO4_tri_o_23),
+        .IO(GPIO4_tri_io[23]),
+        .O(GPIO4_tri_i_23),
+        .T(GPIO4_tri_t_23));
+  IOBUF GPIO4_tri_iobuf_24
+       (.I(GPIO4_tri_o_24),
+        .IO(GPIO4_tri_io[24]),
+        .O(GPIO4_tri_i_24),
+        .T(GPIO4_tri_t_24));
+  IOBUF GPIO4_tri_iobuf_3
+       (.I(GPIO4_tri_o_3),
+        .IO(GPIO4_tri_io[3]),
+        .O(GPIO4_tri_i_3),
+        .T(GPIO4_tri_t_3));
+  IOBUF GPIO4_tri_iobuf_4
+       (.I(GPIO4_tri_o_4),
+        .IO(GPIO4_tri_io[4]),
+        .O(GPIO4_tri_i_4),
+        .T(GPIO4_tri_t_4));
+  IOBUF GPIO4_tri_iobuf_5
+       (.I(GPIO4_tri_o_5),
+        .IO(GPIO4_tri_io[5]),
+        .O(GPIO4_tri_i_5),
+        .T(GPIO4_tri_t_5));
+  IOBUF GPIO4_tri_iobuf_6
+       (.I(GPIO4_tri_o_6),
+        .IO(GPIO4_tri_io[6]),
+        .O(GPIO4_tri_i_6),
+        .T(GPIO4_tri_t_6));
+  IOBUF GPIO4_tri_iobuf_7
+       (.I(GPIO4_tri_o_7),
+        .IO(GPIO4_tri_io[7]),
+        .O(GPIO4_tri_i_7),
+        .T(GPIO4_tri_t_7));
+  IOBUF GPIO4_tri_iobuf_8
+       (.I(GPIO4_tri_o_8),
+        .IO(GPIO4_tri_io[8]),
+        .O(GPIO4_tri_i_8),
+        .T(GPIO4_tri_t_8));
+  IOBUF GPIO4_tri_iobuf_9
+       (.I(GPIO4_tri_o_9),
+        .IO(GPIO4_tri_io[9]),
+        .O(GPIO4_tri_i_9),
+        .T(GPIO4_tri_t_9));
   base_block_design base_block_design_i
        (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
@@ -607,644 +1232,19 @@ module base_block_design_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .GPIO0_tri_i({gpio0_tri_i_24,gpio0_tri_i_23,gpio0_tri_i_22,gpio0_tri_i_21,gpio0_tri_i_20,gpio0_tri_i_19,gpio0_tri_i_18,gpio0_tri_i_17,gpio0_tri_i_16,gpio0_tri_i_15,gpio0_tri_i_14,gpio0_tri_i_13,gpio0_tri_i_12,gpio0_tri_i_11,gpio0_tri_i_10,gpio0_tri_i_9,gpio0_tri_i_8,gpio0_tri_i_7,gpio0_tri_i_6,gpio0_tri_i_5,gpio0_tri_i_4,gpio0_tri_i_3,gpio0_tri_i_2,gpio0_tri_i_1,gpio0_tri_i_0}),
-        .GPIO0_tri_o({gpio0_tri_o_24,gpio0_tri_o_23,gpio0_tri_o_22,gpio0_tri_o_21,gpio0_tri_o_20,gpio0_tri_o_19,gpio0_tri_o_18,gpio0_tri_o_17,gpio0_tri_o_16,gpio0_tri_o_15,gpio0_tri_o_14,gpio0_tri_o_13,gpio0_tri_o_12,gpio0_tri_o_11,gpio0_tri_o_10,gpio0_tri_o_9,gpio0_tri_o_8,gpio0_tri_o_7,gpio0_tri_o_6,gpio0_tri_o_5,gpio0_tri_o_4,gpio0_tri_o_3,gpio0_tri_o_2,gpio0_tri_o_1,gpio0_tri_o_0}),
-        .GPIO0_tri_t({gpio0_tri_t_24,gpio0_tri_t_23,gpio0_tri_t_22,gpio0_tri_t_21,gpio0_tri_t_20,gpio0_tri_t_19,gpio0_tri_t_18,gpio0_tri_t_17,gpio0_tri_t_16,gpio0_tri_t_15,gpio0_tri_t_14,gpio0_tri_t_13,gpio0_tri_t_12,gpio0_tri_t_11,gpio0_tri_t_10,gpio0_tri_t_9,gpio0_tri_t_8,gpio0_tri_t_7,gpio0_tri_t_6,gpio0_tri_t_5,gpio0_tri_t_4,gpio0_tri_t_3,gpio0_tri_t_2,gpio0_tri_t_1,gpio0_tri_t_0}),
-        .GPIO1_tri_i({gpio1_tri_i_24,gpio1_tri_i_23,gpio1_tri_i_22,gpio1_tri_i_21,gpio1_tri_i_20,gpio1_tri_i_19,gpio1_tri_i_18,gpio1_tri_i_17,gpio1_tri_i_16,gpio1_tri_i_15,gpio1_tri_i_14,gpio1_tri_i_13,gpio1_tri_i_12,gpio1_tri_i_11,gpio1_tri_i_10,gpio1_tri_i_9,gpio1_tri_i_8,gpio1_tri_i_7,gpio1_tri_i_6,gpio1_tri_i_5,gpio1_tri_i_4,gpio1_tri_i_3,gpio1_tri_i_2,gpio1_tri_i_1,gpio1_tri_i_0}),
-        .GPIO1_tri_o({gpio1_tri_o_24,gpio1_tri_o_23,gpio1_tri_o_22,gpio1_tri_o_21,gpio1_tri_o_20,gpio1_tri_o_19,gpio1_tri_o_18,gpio1_tri_o_17,gpio1_tri_o_16,gpio1_tri_o_15,gpio1_tri_o_14,gpio1_tri_o_13,gpio1_tri_o_12,gpio1_tri_o_11,gpio1_tri_o_10,gpio1_tri_o_9,gpio1_tri_o_8,gpio1_tri_o_7,gpio1_tri_o_6,gpio1_tri_o_5,gpio1_tri_o_4,gpio1_tri_o_3,gpio1_tri_o_2,gpio1_tri_o_1,gpio1_tri_o_0}),
-        .GPIO1_tri_t({gpio1_tri_t_24,gpio1_tri_t_23,gpio1_tri_t_22,gpio1_tri_t_21,gpio1_tri_t_20,gpio1_tri_t_19,gpio1_tri_t_18,gpio1_tri_t_17,gpio1_tri_t_16,gpio1_tri_t_15,gpio1_tri_t_14,gpio1_tri_t_13,gpio1_tri_t_12,gpio1_tri_t_11,gpio1_tri_t_10,gpio1_tri_t_9,gpio1_tri_t_8,gpio1_tri_t_7,gpio1_tri_t_6,gpio1_tri_t_5,gpio1_tri_t_4,gpio1_tri_t_3,gpio1_tri_t_2,gpio1_tri_t_1,gpio1_tri_t_0}),
-        .GPIO2_tri_i({gpio2_tri_i_24,gpio2_tri_i_23,gpio2_tri_i_22,gpio2_tri_i_21,gpio2_tri_i_20,gpio2_tri_i_19,gpio2_tri_i_18,gpio2_tri_i_17,gpio2_tri_i_16,gpio2_tri_i_15,gpio2_tri_i_14,gpio2_tri_i_13,gpio2_tri_i_12,gpio2_tri_i_11,gpio2_tri_i_10,gpio2_tri_i_9,gpio2_tri_i_8,gpio2_tri_i_7,gpio2_tri_i_6,gpio2_tri_i_5,gpio2_tri_i_4,gpio2_tri_i_3,gpio2_tri_i_2,gpio2_tri_i_1,gpio2_tri_i_0}),
-        .GPIO2_tri_o({gpio2_tri_o_24,gpio2_tri_o_23,gpio2_tri_o_22,gpio2_tri_o_21,gpio2_tri_o_20,gpio2_tri_o_19,gpio2_tri_o_18,gpio2_tri_o_17,gpio2_tri_o_16,gpio2_tri_o_15,gpio2_tri_o_14,gpio2_tri_o_13,gpio2_tri_o_12,gpio2_tri_o_11,gpio2_tri_o_10,gpio2_tri_o_9,gpio2_tri_o_8,gpio2_tri_o_7,gpio2_tri_o_6,gpio2_tri_o_5,gpio2_tri_o_4,gpio2_tri_o_3,gpio2_tri_o_2,gpio2_tri_o_1,gpio2_tri_o_0}),
-        .GPIO2_tri_t({gpio2_tri_t_24,gpio2_tri_t_23,gpio2_tri_t_22,gpio2_tri_t_21,gpio2_tri_t_20,gpio2_tri_t_19,gpio2_tri_t_18,gpio2_tri_t_17,gpio2_tri_t_16,gpio2_tri_t_15,gpio2_tri_t_14,gpio2_tri_t_13,gpio2_tri_t_12,gpio2_tri_t_11,gpio2_tri_t_10,gpio2_tri_t_9,gpio2_tri_t_8,gpio2_tri_t_7,gpio2_tri_t_6,gpio2_tri_t_5,gpio2_tri_t_4,gpio2_tri_t_3,gpio2_tri_t_2,gpio2_tri_t_1,gpio2_tri_t_0}),
-        .GPIO3_tri_i({gpio3_tri_i_24,gpio3_tri_i_23,gpio3_tri_i_22,gpio3_tri_i_21,gpio3_tri_i_20,gpio3_tri_i_19,gpio3_tri_i_18,gpio3_tri_i_17,gpio3_tri_i_16,gpio3_tri_i_15,gpio3_tri_i_14,gpio3_tri_i_13,gpio3_tri_i_12,gpio3_tri_i_11,gpio3_tri_i_10,gpio3_tri_i_9,gpio3_tri_i_8,gpio3_tri_i_7,gpio3_tri_i_6,gpio3_tri_i_5,gpio3_tri_i_4,gpio3_tri_i_3,gpio3_tri_i_2,gpio3_tri_i_1,gpio3_tri_i_0}),
-        .GPIO3_tri_o({gpio3_tri_o_24,gpio3_tri_o_23,gpio3_tri_o_22,gpio3_tri_o_21,gpio3_tri_o_20,gpio3_tri_o_19,gpio3_tri_o_18,gpio3_tri_o_17,gpio3_tri_o_16,gpio3_tri_o_15,gpio3_tri_o_14,gpio3_tri_o_13,gpio3_tri_o_12,gpio3_tri_o_11,gpio3_tri_o_10,gpio3_tri_o_9,gpio3_tri_o_8,gpio3_tri_o_7,gpio3_tri_o_6,gpio3_tri_o_5,gpio3_tri_o_4,gpio3_tri_o_3,gpio3_tri_o_2,gpio3_tri_o_1,gpio3_tri_o_0}),
-        .GPIO3_tri_t({gpio3_tri_t_24,gpio3_tri_t_23,gpio3_tri_t_22,gpio3_tri_t_21,gpio3_tri_t_20,gpio3_tri_t_19,gpio3_tri_t_18,gpio3_tri_t_17,gpio3_tri_t_16,gpio3_tri_t_15,gpio3_tri_t_14,gpio3_tri_t_13,gpio3_tri_t_12,gpio3_tri_t_11,gpio3_tri_t_10,gpio3_tri_t_9,gpio3_tri_t_8,gpio3_tri_t_7,gpio3_tri_t_6,gpio3_tri_t_5,gpio3_tri_t_4,gpio3_tri_t_3,gpio3_tri_t_2,gpio3_tri_t_1,gpio3_tri_t_0}),
-        .GPIO4_tri_i({gpio4_tri_i_24,gpio4_tri_i_23,gpio4_tri_i_22,gpio4_tri_i_21,gpio4_tri_i_20,gpio4_tri_i_19,gpio4_tri_i_18,gpio4_tri_i_17,gpio4_tri_i_16,gpio4_tri_i_15,gpio4_tri_i_14,gpio4_tri_i_13,gpio4_tri_i_12,gpio4_tri_i_11,gpio4_tri_i_10,gpio4_tri_i_9,gpio4_tri_i_8,gpio4_tri_i_7,gpio4_tri_i_6,gpio4_tri_i_5,gpio4_tri_i_4,gpio4_tri_i_3,gpio4_tri_i_2,gpio4_tri_i_1,gpio4_tri_i_0}),
-        .GPIO4_tri_o({gpio4_tri_o_24,gpio4_tri_o_23,gpio4_tri_o_22,gpio4_tri_o_21,gpio4_tri_o_20,gpio4_tri_o_19,gpio4_tri_o_18,gpio4_tri_o_17,gpio4_tri_o_16,gpio4_tri_o_15,gpio4_tri_o_14,gpio4_tri_o_13,gpio4_tri_o_12,gpio4_tri_o_11,gpio4_tri_o_10,gpio4_tri_o_9,gpio4_tri_o_8,gpio4_tri_o_7,gpio4_tri_o_6,gpio4_tri_o_5,gpio4_tri_o_4,gpio4_tri_o_3,gpio4_tri_o_2,gpio4_tri_o_1,gpio4_tri_o_0}),
-        .GPIO4_tri_t({gpio4_tri_t_24,gpio4_tri_t_23,gpio4_tri_t_22,gpio4_tri_t_21,gpio4_tri_t_20,gpio4_tri_t_19,gpio4_tri_t_18,gpio4_tri_t_17,gpio4_tri_t_16,gpio4_tri_t_15,gpio4_tri_t_14,gpio4_tri_t_13,gpio4_tri_t_12,gpio4_tri_t_11,gpio4_tri_t_10,gpio4_tri_t_9,gpio4_tri_t_8,gpio4_tri_t_7,gpio4_tri_t_6,gpio4_tri_t_5,gpio4_tri_t_4,gpio4_tri_t_3,gpio4_tri_t_2,gpio4_tri_t_1,gpio4_tri_t_0}));
-  IOBUF gpio0_tri_iobuf_0
-       (.I(gpio0_tri_o_0),
-        .IO(gpio0_tri_io[0]),
-        .O(gpio0_tri_i_0),
-        .T(gpio0_tri_t_0));
-  IOBUF gpio0_tri_iobuf_1
-       (.I(gpio0_tri_o_1),
-        .IO(gpio0_tri_io[1]),
-        .O(gpio0_tri_i_1),
-        .T(gpio0_tri_t_1));
-  IOBUF gpio0_tri_iobuf_10
-       (.I(gpio0_tri_o_10),
-        .IO(gpio0_tri_io[10]),
-        .O(gpio0_tri_i_10),
-        .T(gpio0_tri_t_10));
-  IOBUF gpio0_tri_iobuf_11
-       (.I(gpio0_tri_o_11),
-        .IO(gpio0_tri_io[11]),
-        .O(gpio0_tri_i_11),
-        .T(gpio0_tri_t_11));
-  IOBUF gpio0_tri_iobuf_12
-       (.I(gpio0_tri_o_12),
-        .IO(gpio0_tri_io[12]),
-        .O(gpio0_tri_i_12),
-        .T(gpio0_tri_t_12));
-  IOBUF gpio0_tri_iobuf_13
-       (.I(gpio0_tri_o_13),
-        .IO(gpio0_tri_io[13]),
-        .O(gpio0_tri_i_13),
-        .T(gpio0_tri_t_13));
-  IOBUF gpio0_tri_iobuf_14
-       (.I(gpio0_tri_o_14),
-        .IO(gpio0_tri_io[14]),
-        .O(gpio0_tri_i_14),
-        .T(gpio0_tri_t_14));
-  IOBUF gpio0_tri_iobuf_15
-       (.I(gpio0_tri_o_15),
-        .IO(gpio0_tri_io[15]),
-        .O(gpio0_tri_i_15),
-        .T(gpio0_tri_t_15));
-  IOBUF gpio0_tri_iobuf_16
-       (.I(gpio0_tri_o_16),
-        .IO(gpio0_tri_io[16]),
-        .O(gpio0_tri_i_16),
-        .T(gpio0_tri_t_16));
-  IOBUF gpio0_tri_iobuf_17
-       (.I(gpio0_tri_o_17),
-        .IO(gpio0_tri_io[17]),
-        .O(gpio0_tri_i_17),
-        .T(gpio0_tri_t_17));
-  IOBUF gpio0_tri_iobuf_18
-       (.I(gpio0_tri_o_18),
-        .IO(gpio0_tri_io[18]),
-        .O(gpio0_tri_i_18),
-        .T(gpio0_tri_t_18));
-  IOBUF gpio0_tri_iobuf_19
-       (.I(gpio0_tri_o_19),
-        .IO(gpio0_tri_io[19]),
-        .O(gpio0_tri_i_19),
-        .T(gpio0_tri_t_19));
-  IOBUF gpio0_tri_iobuf_2
-       (.I(gpio0_tri_o_2),
-        .IO(gpio0_tri_io[2]),
-        .O(gpio0_tri_i_2),
-        .T(gpio0_tri_t_2));
-  IOBUF gpio0_tri_iobuf_20
-       (.I(gpio0_tri_o_20),
-        .IO(gpio0_tri_io[20]),
-        .O(gpio0_tri_i_20),
-        .T(gpio0_tri_t_20));
-  IOBUF gpio0_tri_iobuf_21
-       (.I(gpio0_tri_o_21),
-        .IO(gpio0_tri_io[21]),
-        .O(gpio0_tri_i_21),
-        .T(gpio0_tri_t_21));
-  IOBUF gpio0_tri_iobuf_22
-       (.I(gpio0_tri_o_22),
-        .IO(gpio0_tri_io[22]),
-        .O(gpio0_tri_i_22),
-        .T(gpio0_tri_t_22));
-  IOBUF gpio0_tri_iobuf_23
-       (.I(gpio0_tri_o_23),
-        .IO(gpio0_tri_io[23]),
-        .O(gpio0_tri_i_23),
-        .T(gpio0_tri_t_23));
-  IOBUF gpio0_tri_iobuf_24
-       (.I(gpio0_tri_o_24),
-        .IO(gpio0_tri_io[24]),
-        .O(gpio0_tri_i_24),
-        .T(gpio0_tri_t_24));
-  IOBUF gpio0_tri_iobuf_3
-       (.I(gpio0_tri_o_3),
-        .IO(gpio0_tri_io[3]),
-        .O(gpio0_tri_i_3),
-        .T(gpio0_tri_t_3));
-  IOBUF gpio0_tri_iobuf_4
-       (.I(gpio0_tri_o_4),
-        .IO(gpio0_tri_io[4]),
-        .O(gpio0_tri_i_4),
-        .T(gpio0_tri_t_4));
-  IOBUF gpio0_tri_iobuf_5
-       (.I(gpio0_tri_o_5),
-        .IO(gpio0_tri_io[5]),
-        .O(gpio0_tri_i_5),
-        .T(gpio0_tri_t_5));
-  IOBUF gpio0_tri_iobuf_6
-       (.I(gpio0_tri_o_6),
-        .IO(gpio0_tri_io[6]),
-        .O(gpio0_tri_i_6),
-        .T(gpio0_tri_t_6));
-  IOBUF gpio0_tri_iobuf_7
-       (.I(gpio0_tri_o_7),
-        .IO(gpio0_tri_io[7]),
-        .O(gpio0_tri_i_7),
-        .T(gpio0_tri_t_7));
-  IOBUF gpio0_tri_iobuf_8
-       (.I(gpio0_tri_o_8),
-        .IO(gpio0_tri_io[8]),
-        .O(gpio0_tri_i_8),
-        .T(gpio0_tri_t_8));
-  IOBUF gpio0_tri_iobuf_9
-       (.I(gpio0_tri_o_9),
-        .IO(gpio0_tri_io[9]),
-        .O(gpio0_tri_i_9),
-        .T(gpio0_tri_t_9));
-  IOBUF gpio1_tri_iobuf_0
-       (.I(gpio1_tri_o_0),
-        .IO(gpio1_tri_io[0]),
-        .O(gpio1_tri_i_0),
-        .T(gpio1_tri_t_0));
-  IOBUF gpio1_tri_iobuf_1
-       (.I(gpio1_tri_o_1),
-        .IO(gpio1_tri_io[1]),
-        .O(gpio1_tri_i_1),
-        .T(gpio1_tri_t_1));
-  IOBUF gpio1_tri_iobuf_10
-       (.I(gpio1_tri_o_10),
-        .IO(gpio1_tri_io[10]),
-        .O(gpio1_tri_i_10),
-        .T(gpio1_tri_t_10));
-  IOBUF gpio1_tri_iobuf_11
-       (.I(gpio1_tri_o_11),
-        .IO(gpio1_tri_io[11]),
-        .O(gpio1_tri_i_11),
-        .T(gpio1_tri_t_11));
-  IOBUF gpio1_tri_iobuf_12
-       (.I(gpio1_tri_o_12),
-        .IO(gpio1_tri_io[12]),
-        .O(gpio1_tri_i_12),
-        .T(gpio1_tri_t_12));
-  IOBUF gpio1_tri_iobuf_13
-       (.I(gpio1_tri_o_13),
-        .IO(gpio1_tri_io[13]),
-        .O(gpio1_tri_i_13),
-        .T(gpio1_tri_t_13));
-  IOBUF gpio1_tri_iobuf_14
-       (.I(gpio1_tri_o_14),
-        .IO(gpio1_tri_io[14]),
-        .O(gpio1_tri_i_14),
-        .T(gpio1_tri_t_14));
-  IOBUF gpio1_tri_iobuf_15
-       (.I(gpio1_tri_o_15),
-        .IO(gpio1_tri_io[15]),
-        .O(gpio1_tri_i_15),
-        .T(gpio1_tri_t_15));
-  IOBUF gpio1_tri_iobuf_16
-       (.I(gpio1_tri_o_16),
-        .IO(gpio1_tri_io[16]),
-        .O(gpio1_tri_i_16),
-        .T(gpio1_tri_t_16));
-  IOBUF gpio1_tri_iobuf_17
-       (.I(gpio1_tri_o_17),
-        .IO(gpio1_tri_io[17]),
-        .O(gpio1_tri_i_17),
-        .T(gpio1_tri_t_17));
-  IOBUF gpio1_tri_iobuf_18
-       (.I(gpio1_tri_o_18),
-        .IO(gpio1_tri_io[18]),
-        .O(gpio1_tri_i_18),
-        .T(gpio1_tri_t_18));
-  IOBUF gpio1_tri_iobuf_19
-       (.I(gpio1_tri_o_19),
-        .IO(gpio1_tri_io[19]),
-        .O(gpio1_tri_i_19),
-        .T(gpio1_tri_t_19));
-  IOBUF gpio1_tri_iobuf_2
-       (.I(gpio1_tri_o_2),
-        .IO(gpio1_tri_io[2]),
-        .O(gpio1_tri_i_2),
-        .T(gpio1_tri_t_2));
-  IOBUF gpio1_tri_iobuf_20
-       (.I(gpio1_tri_o_20),
-        .IO(gpio1_tri_io[20]),
-        .O(gpio1_tri_i_20),
-        .T(gpio1_tri_t_20));
-  IOBUF gpio1_tri_iobuf_21
-       (.I(gpio1_tri_o_21),
-        .IO(gpio1_tri_io[21]),
-        .O(gpio1_tri_i_21),
-        .T(gpio1_tri_t_21));
-  IOBUF gpio1_tri_iobuf_22
-       (.I(gpio1_tri_o_22),
-        .IO(gpio1_tri_io[22]),
-        .O(gpio1_tri_i_22),
-        .T(gpio1_tri_t_22));
-  IOBUF gpio1_tri_iobuf_23
-       (.I(gpio1_tri_o_23),
-        .IO(gpio1_tri_io[23]),
-        .O(gpio1_tri_i_23),
-        .T(gpio1_tri_t_23));
-  IOBUF gpio1_tri_iobuf_24
-       (.I(gpio1_tri_o_24),
-        .IO(gpio1_tri_io[24]),
-        .O(gpio1_tri_i_24),
-        .T(gpio1_tri_t_24));
-  IOBUF gpio1_tri_iobuf_3
-       (.I(gpio1_tri_o_3),
-        .IO(gpio1_tri_io[3]),
-        .O(gpio1_tri_i_3),
-        .T(gpio1_tri_t_3));
-  IOBUF gpio1_tri_iobuf_4
-       (.I(gpio1_tri_o_4),
-        .IO(gpio1_tri_io[4]),
-        .O(gpio1_tri_i_4),
-        .T(gpio1_tri_t_4));
-  IOBUF gpio1_tri_iobuf_5
-       (.I(gpio1_tri_o_5),
-        .IO(gpio1_tri_io[5]),
-        .O(gpio1_tri_i_5),
-        .T(gpio1_tri_t_5));
-  IOBUF gpio1_tri_iobuf_6
-       (.I(gpio1_tri_o_6),
-        .IO(gpio1_tri_io[6]),
-        .O(gpio1_tri_i_6),
-        .T(gpio1_tri_t_6));
-  IOBUF gpio1_tri_iobuf_7
-       (.I(gpio1_tri_o_7),
-        .IO(gpio1_tri_io[7]),
-        .O(gpio1_tri_i_7),
-        .T(gpio1_tri_t_7));
-  IOBUF gpio1_tri_iobuf_8
-       (.I(gpio1_tri_o_8),
-        .IO(gpio1_tri_io[8]),
-        .O(gpio1_tri_i_8),
-        .T(gpio1_tri_t_8));
-  IOBUF gpio1_tri_iobuf_9
-       (.I(gpio1_tri_o_9),
-        .IO(gpio1_tri_io[9]),
-        .O(gpio1_tri_i_9),
-        .T(gpio1_tri_t_9));
-  IOBUF gpio2_tri_iobuf_0
-       (.I(gpio2_tri_o_0),
-        .IO(gpio2_tri_io[0]),
-        .O(gpio2_tri_i_0),
-        .T(gpio2_tri_t_0));
-  IOBUF gpio2_tri_iobuf_1
-       (.I(gpio2_tri_o_1),
-        .IO(gpio2_tri_io[1]),
-        .O(gpio2_tri_i_1),
-        .T(gpio2_tri_t_1));
-  IOBUF gpio2_tri_iobuf_10
-       (.I(gpio2_tri_o_10),
-        .IO(gpio2_tri_io[10]),
-        .O(gpio2_tri_i_10),
-        .T(gpio2_tri_t_10));
-  IOBUF gpio2_tri_iobuf_11
-       (.I(gpio2_tri_o_11),
-        .IO(gpio2_tri_io[11]),
-        .O(gpio2_tri_i_11),
-        .T(gpio2_tri_t_11));
-  IOBUF gpio2_tri_iobuf_12
-       (.I(gpio2_tri_o_12),
-        .IO(gpio2_tri_io[12]),
-        .O(gpio2_tri_i_12),
-        .T(gpio2_tri_t_12));
-  IOBUF gpio2_tri_iobuf_13
-       (.I(gpio2_tri_o_13),
-        .IO(gpio2_tri_io[13]),
-        .O(gpio2_tri_i_13),
-        .T(gpio2_tri_t_13));
-  IOBUF gpio2_tri_iobuf_14
-       (.I(gpio2_tri_o_14),
-        .IO(gpio2_tri_io[14]),
-        .O(gpio2_tri_i_14),
-        .T(gpio2_tri_t_14));
-  IOBUF gpio2_tri_iobuf_15
-       (.I(gpio2_tri_o_15),
-        .IO(gpio2_tri_io[15]),
-        .O(gpio2_tri_i_15),
-        .T(gpio2_tri_t_15));
-  IOBUF gpio2_tri_iobuf_16
-       (.I(gpio2_tri_o_16),
-        .IO(gpio2_tri_io[16]),
-        .O(gpio2_tri_i_16),
-        .T(gpio2_tri_t_16));
-  IOBUF gpio2_tri_iobuf_17
-       (.I(gpio2_tri_o_17),
-        .IO(gpio2_tri_io[17]),
-        .O(gpio2_tri_i_17),
-        .T(gpio2_tri_t_17));
-  IOBUF gpio2_tri_iobuf_18
-       (.I(gpio2_tri_o_18),
-        .IO(gpio2_tri_io[18]),
-        .O(gpio2_tri_i_18),
-        .T(gpio2_tri_t_18));
-  IOBUF gpio2_tri_iobuf_19
-       (.I(gpio2_tri_o_19),
-        .IO(gpio2_tri_io[19]),
-        .O(gpio2_tri_i_19),
-        .T(gpio2_tri_t_19));
-  IOBUF gpio2_tri_iobuf_2
-       (.I(gpio2_tri_o_2),
-        .IO(gpio2_tri_io[2]),
-        .O(gpio2_tri_i_2),
-        .T(gpio2_tri_t_2));
-  IOBUF gpio2_tri_iobuf_20
-       (.I(gpio2_tri_o_20),
-        .IO(gpio2_tri_io[20]),
-        .O(gpio2_tri_i_20),
-        .T(gpio2_tri_t_20));
-  IOBUF gpio2_tri_iobuf_21
-       (.I(gpio2_tri_o_21),
-        .IO(gpio2_tri_io[21]),
-        .O(gpio2_tri_i_21),
-        .T(gpio2_tri_t_21));
-  IOBUF gpio2_tri_iobuf_22
-       (.I(gpio2_tri_o_22),
-        .IO(gpio2_tri_io[22]),
-        .O(gpio2_tri_i_22),
-        .T(gpio2_tri_t_22));
-  IOBUF gpio2_tri_iobuf_23
-       (.I(gpio2_tri_o_23),
-        .IO(gpio2_tri_io[23]),
-        .O(gpio2_tri_i_23),
-        .T(gpio2_tri_t_23));
-  IOBUF gpio2_tri_iobuf_24
-       (.I(gpio2_tri_o_24),
-        .IO(gpio2_tri_io[24]),
-        .O(gpio2_tri_i_24),
-        .T(gpio2_tri_t_24));
-  IOBUF gpio2_tri_iobuf_3
-       (.I(gpio2_tri_o_3),
-        .IO(gpio2_tri_io[3]),
-        .O(gpio2_tri_i_3),
-        .T(gpio2_tri_t_3));
-  IOBUF gpio2_tri_iobuf_4
-       (.I(gpio2_tri_o_4),
-        .IO(gpio2_tri_io[4]),
-        .O(gpio2_tri_i_4),
-        .T(gpio2_tri_t_4));
-  IOBUF gpio2_tri_iobuf_5
-       (.I(gpio2_tri_o_5),
-        .IO(gpio2_tri_io[5]),
-        .O(gpio2_tri_i_5),
-        .T(gpio2_tri_t_5));
-  IOBUF gpio2_tri_iobuf_6
-       (.I(gpio2_tri_o_6),
-        .IO(gpio2_tri_io[6]),
-        .O(gpio2_tri_i_6),
-        .T(gpio2_tri_t_6));
-  IOBUF gpio2_tri_iobuf_7
-       (.I(gpio2_tri_o_7),
-        .IO(gpio2_tri_io[7]),
-        .O(gpio2_tri_i_7),
-        .T(gpio2_tri_t_7));
-  IOBUF gpio2_tri_iobuf_8
-       (.I(gpio2_tri_o_8),
-        .IO(gpio2_tri_io[8]),
-        .O(gpio2_tri_i_8),
-        .T(gpio2_tri_t_8));
-  IOBUF gpio2_tri_iobuf_9
-       (.I(gpio2_tri_o_9),
-        .IO(gpio2_tri_io[9]),
-        .O(gpio2_tri_i_9),
-        .T(gpio2_tri_t_9));
-  IOBUF gpio3_tri_iobuf_0
-       (.I(gpio3_tri_o_0),
-        .IO(gpio3_tri_io[0]),
-        .O(gpio3_tri_i_0),
-        .T(gpio3_tri_t_0));
-  IOBUF gpio3_tri_iobuf_1
-       (.I(gpio3_tri_o_1),
-        .IO(gpio3_tri_io[1]),
-        .O(gpio3_tri_i_1),
-        .T(gpio3_tri_t_1));
-  IOBUF gpio3_tri_iobuf_10
-       (.I(gpio3_tri_o_10),
-        .IO(gpio3_tri_io[10]),
-        .O(gpio3_tri_i_10),
-        .T(gpio3_tri_t_10));
-  IOBUF gpio3_tri_iobuf_11
-       (.I(gpio3_tri_o_11),
-        .IO(gpio3_tri_io[11]),
-        .O(gpio3_tri_i_11),
-        .T(gpio3_tri_t_11));
-  IOBUF gpio3_tri_iobuf_12
-       (.I(gpio3_tri_o_12),
-        .IO(gpio3_tri_io[12]),
-        .O(gpio3_tri_i_12),
-        .T(gpio3_tri_t_12));
-  IOBUF gpio3_tri_iobuf_13
-       (.I(gpio3_tri_o_13),
-        .IO(gpio3_tri_io[13]),
-        .O(gpio3_tri_i_13),
-        .T(gpio3_tri_t_13));
-  IOBUF gpio3_tri_iobuf_14
-       (.I(gpio3_tri_o_14),
-        .IO(gpio3_tri_io[14]),
-        .O(gpio3_tri_i_14),
-        .T(gpio3_tri_t_14));
-  IOBUF gpio3_tri_iobuf_15
-       (.I(gpio3_tri_o_15),
-        .IO(gpio3_tri_io[15]),
-        .O(gpio3_tri_i_15),
-        .T(gpio3_tri_t_15));
-  IOBUF gpio3_tri_iobuf_16
-       (.I(gpio3_tri_o_16),
-        .IO(gpio3_tri_io[16]),
-        .O(gpio3_tri_i_16),
-        .T(gpio3_tri_t_16));
-  IOBUF gpio3_tri_iobuf_17
-       (.I(gpio3_tri_o_17),
-        .IO(gpio3_tri_io[17]),
-        .O(gpio3_tri_i_17),
-        .T(gpio3_tri_t_17));
-  IOBUF gpio3_tri_iobuf_18
-       (.I(gpio3_tri_o_18),
-        .IO(gpio3_tri_io[18]),
-        .O(gpio3_tri_i_18),
-        .T(gpio3_tri_t_18));
-  IOBUF gpio3_tri_iobuf_19
-       (.I(gpio3_tri_o_19),
-        .IO(gpio3_tri_io[19]),
-        .O(gpio3_tri_i_19),
-        .T(gpio3_tri_t_19));
-  IOBUF gpio3_tri_iobuf_2
-       (.I(gpio3_tri_o_2),
-        .IO(gpio3_tri_io[2]),
-        .O(gpio3_tri_i_2),
-        .T(gpio3_tri_t_2));
-  IOBUF gpio3_tri_iobuf_20
-       (.I(gpio3_tri_o_20),
-        .IO(gpio3_tri_io[20]),
-        .O(gpio3_tri_i_20),
-        .T(gpio3_tri_t_20));
-  IOBUF gpio3_tri_iobuf_21
-       (.I(gpio3_tri_o_21),
-        .IO(gpio3_tri_io[21]),
-        .O(gpio3_tri_i_21),
-        .T(gpio3_tri_t_21));
-  IOBUF gpio3_tri_iobuf_22
-       (.I(gpio3_tri_o_22),
-        .IO(gpio3_tri_io[22]),
-        .O(gpio3_tri_i_22),
-        .T(gpio3_tri_t_22));
-  IOBUF gpio3_tri_iobuf_23
-       (.I(gpio3_tri_o_23),
-        .IO(gpio3_tri_io[23]),
-        .O(gpio3_tri_i_23),
-        .T(gpio3_tri_t_23));
-  IOBUF gpio3_tri_iobuf_24
-       (.I(gpio3_tri_o_24),
-        .IO(gpio3_tri_io[24]),
-        .O(gpio3_tri_i_24),
-        .T(gpio3_tri_t_24));
-  IOBUF gpio3_tri_iobuf_3
-       (.I(gpio3_tri_o_3),
-        .IO(gpio3_tri_io[3]),
-        .O(gpio3_tri_i_3),
-        .T(gpio3_tri_t_3));
-  IOBUF gpio3_tri_iobuf_4
-       (.I(gpio3_tri_o_4),
-        .IO(gpio3_tri_io[4]),
-        .O(gpio3_tri_i_4),
-        .T(gpio3_tri_t_4));
-  IOBUF gpio3_tri_iobuf_5
-       (.I(gpio3_tri_o_5),
-        .IO(gpio3_tri_io[5]),
-        .O(gpio3_tri_i_5),
-        .T(gpio3_tri_t_5));
-  IOBUF gpio3_tri_iobuf_6
-       (.I(gpio3_tri_o_6),
-        .IO(gpio3_tri_io[6]),
-        .O(gpio3_tri_i_6),
-        .T(gpio3_tri_t_6));
-  IOBUF gpio3_tri_iobuf_7
-       (.I(gpio3_tri_o_7),
-        .IO(gpio3_tri_io[7]),
-        .O(gpio3_tri_i_7),
-        .T(gpio3_tri_t_7));
-  IOBUF gpio3_tri_iobuf_8
-       (.I(gpio3_tri_o_8),
-        .IO(gpio3_tri_io[8]),
-        .O(gpio3_tri_i_8),
-        .T(gpio3_tri_t_8));
-  IOBUF gpio3_tri_iobuf_9
-       (.I(gpio3_tri_o_9),
-        .IO(gpio3_tri_io[9]),
-        .O(gpio3_tri_i_9),
-        .T(gpio3_tri_t_9));
-  IOBUF gpio4_tri_iobuf_0
-       (.I(gpio4_tri_o_0),
-        .IO(gpio4_tri_io[0]),
-        .O(gpio4_tri_i_0),
-        .T(gpio4_tri_t_0));
-  IOBUF gpio4_tri_iobuf_1
-       (.I(gpio4_tri_o_1),
-        .IO(gpio4_tri_io[1]),
-        .O(gpio4_tri_i_1),
-        .T(gpio4_tri_t_1));
-  IOBUF gpio4_tri_iobuf_10
-       (.I(gpio4_tri_o_10),
-        .IO(gpio4_tri_io[10]),
-        .O(gpio4_tri_i_10),
-        .T(gpio4_tri_t_10));
-  IOBUF gpio4_tri_iobuf_11
-       (.I(gpio4_tri_o_11),
-        .IO(gpio4_tri_io[11]),
-        .O(gpio4_tri_i_11),
-        .T(gpio4_tri_t_11));
-  IOBUF gpio4_tri_iobuf_12
-       (.I(gpio4_tri_o_12),
-        .IO(gpio4_tri_io[12]),
-        .O(gpio4_tri_i_12),
-        .T(gpio4_tri_t_12));
-  IOBUF gpio4_tri_iobuf_13
-       (.I(gpio4_tri_o_13),
-        .IO(gpio4_tri_io[13]),
-        .O(gpio4_tri_i_13),
-        .T(gpio4_tri_t_13));
-  IOBUF gpio4_tri_iobuf_14
-       (.I(gpio4_tri_o_14),
-        .IO(gpio4_tri_io[14]),
-        .O(gpio4_tri_i_14),
-        .T(gpio4_tri_t_14));
-  IOBUF gpio4_tri_iobuf_15
-       (.I(gpio4_tri_o_15),
-        .IO(gpio4_tri_io[15]),
-        .O(gpio4_tri_i_15),
-        .T(gpio4_tri_t_15));
-  IOBUF gpio4_tri_iobuf_16
-       (.I(gpio4_tri_o_16),
-        .IO(gpio4_tri_io[16]),
-        .O(gpio4_tri_i_16),
-        .T(gpio4_tri_t_16));
-  IOBUF gpio4_tri_iobuf_17
-       (.I(gpio4_tri_o_17),
-        .IO(gpio4_tri_io[17]),
-        .O(gpio4_tri_i_17),
-        .T(gpio4_tri_t_17));
-  IOBUF gpio4_tri_iobuf_18
-       (.I(gpio4_tri_o_18),
-        .IO(gpio4_tri_io[18]),
-        .O(gpio4_tri_i_18),
-        .T(gpio4_tri_t_18));
-  IOBUF gpio4_tri_iobuf_19
-       (.I(gpio4_tri_o_19),
-        .IO(gpio4_tri_io[19]),
-        .O(gpio4_tri_i_19),
-        .T(gpio4_tri_t_19));
-  IOBUF gpio4_tri_iobuf_2
-       (.I(gpio4_tri_o_2),
-        .IO(gpio4_tri_io[2]),
-        .O(gpio4_tri_i_2),
-        .T(gpio4_tri_t_2));
-  IOBUF gpio4_tri_iobuf_20
-       (.I(gpio4_tri_o_20),
-        .IO(gpio4_tri_io[20]),
-        .O(gpio4_tri_i_20),
-        .T(gpio4_tri_t_20));
-  IOBUF gpio4_tri_iobuf_21
-       (.I(gpio4_tri_o_21),
-        .IO(gpio4_tri_io[21]),
-        .O(gpio4_tri_i_21),
-        .T(gpio4_tri_t_21));
-  IOBUF gpio4_tri_iobuf_22
-       (.I(gpio4_tri_o_22),
-        .IO(gpio4_tri_io[22]),
-        .O(gpio4_tri_i_22),
-        .T(gpio4_tri_t_22));
-  IOBUF gpio4_tri_iobuf_23
-       (.I(gpio4_tri_o_23),
-        .IO(gpio4_tri_io[23]),
-        .O(gpio4_tri_i_23),
-        .T(gpio4_tri_t_23));
-  IOBUF gpio4_tri_iobuf_24
-       (.I(gpio4_tri_o_24),
-        .IO(gpio4_tri_io[24]),
-        .O(gpio4_tri_i_24),
-        .T(gpio4_tri_t_24));
-  IOBUF gpio4_tri_iobuf_3
-       (.I(gpio4_tri_o_3),
-        .IO(gpio4_tri_io[3]),
-        .O(gpio4_tri_i_3),
-        .T(gpio4_tri_t_3));
-  IOBUF gpio4_tri_iobuf_4
-       (.I(gpio4_tri_o_4),
-        .IO(gpio4_tri_io[4]),
-        .O(gpio4_tri_i_4),
-        .T(gpio4_tri_t_4));
-  IOBUF gpio4_tri_iobuf_5
-       (.I(gpio4_tri_o_5),
-        .IO(gpio4_tri_io[5]),
-        .O(gpio4_tri_i_5),
-        .T(gpio4_tri_t_5));
-  IOBUF gpio4_tri_iobuf_6
-       (.I(gpio4_tri_o_6),
-        .IO(gpio4_tri_io[6]),
-        .O(gpio4_tri_i_6),
-        .T(gpio4_tri_t_6));
-  IOBUF gpio4_tri_iobuf_7
-       (.I(gpio4_tri_o_7),
-        .IO(gpio4_tri_io[7]),
-        .O(gpio4_tri_i_7),
-        .T(gpio4_tri_t_7));
-  IOBUF gpio4_tri_iobuf_8
-       (.I(gpio4_tri_o_8),
-        .IO(gpio4_tri_io[8]),
-        .O(gpio4_tri_i_8),
-        .T(gpio4_tri_t_8));
-  IOBUF gpio4_tri_iobuf_9
-       (.I(gpio4_tri_o_9),
-        .IO(gpio4_tri_io[9]),
-        .O(gpio4_tri_i_9),
-        .T(gpio4_tri_t_9));
+        .GPIO0_tri_i({GPIO0_tri_i_24,GPIO0_tri_i_23,GPIO0_tri_i_22,GPIO0_tri_i_21,GPIO0_tri_i_20,GPIO0_tri_i_19,GPIO0_tri_i_18,GPIO0_tri_i_17,GPIO0_tri_i_16,GPIO0_tri_i_15,GPIO0_tri_i_14,GPIO0_tri_i_13,GPIO0_tri_i_12,GPIO0_tri_i_11,GPIO0_tri_i_10,GPIO0_tri_i_9,GPIO0_tri_i_8,GPIO0_tri_i_7,GPIO0_tri_i_6,GPIO0_tri_i_5,GPIO0_tri_i_4,GPIO0_tri_i_3,GPIO0_tri_i_2,GPIO0_tri_i_1,GPIO0_tri_i_0}),
+        .GPIO0_tri_o({GPIO0_tri_o_24,GPIO0_tri_o_23,GPIO0_tri_o_22,GPIO0_tri_o_21,GPIO0_tri_o_20,GPIO0_tri_o_19,GPIO0_tri_o_18,GPIO0_tri_o_17,GPIO0_tri_o_16,GPIO0_tri_o_15,GPIO0_tri_o_14,GPIO0_tri_o_13,GPIO0_tri_o_12,GPIO0_tri_o_11,GPIO0_tri_o_10,GPIO0_tri_o_9,GPIO0_tri_o_8,GPIO0_tri_o_7,GPIO0_tri_o_6,GPIO0_tri_o_5,GPIO0_tri_o_4,GPIO0_tri_o_3,GPIO0_tri_o_2,GPIO0_tri_o_1,GPIO0_tri_o_0}),
+        .GPIO0_tri_t({GPIO0_tri_t_24,GPIO0_tri_t_23,GPIO0_tri_t_22,GPIO0_tri_t_21,GPIO0_tri_t_20,GPIO0_tri_t_19,GPIO0_tri_t_18,GPIO0_tri_t_17,GPIO0_tri_t_16,GPIO0_tri_t_15,GPIO0_tri_t_14,GPIO0_tri_t_13,GPIO0_tri_t_12,GPIO0_tri_t_11,GPIO0_tri_t_10,GPIO0_tri_t_9,GPIO0_tri_t_8,GPIO0_tri_t_7,GPIO0_tri_t_6,GPIO0_tri_t_5,GPIO0_tri_t_4,GPIO0_tri_t_3,GPIO0_tri_t_2,GPIO0_tri_t_1,GPIO0_tri_t_0}),
+        .GPIO1_tri_i({GPIO1_tri_i_24,GPIO1_tri_i_23,GPIO1_tri_i_22,GPIO1_tri_i_21,GPIO1_tri_i_20,GPIO1_tri_i_19,GPIO1_tri_i_18,GPIO1_tri_i_17,GPIO1_tri_i_16,GPIO1_tri_i_15,GPIO1_tri_i_14,GPIO1_tri_i_13,GPIO1_tri_i_12,GPIO1_tri_i_11,GPIO1_tri_i_10,GPIO1_tri_i_9,GPIO1_tri_i_8,GPIO1_tri_i_7,GPIO1_tri_i_6,GPIO1_tri_i_5,GPIO1_tri_i_4,GPIO1_tri_i_3,GPIO1_tri_i_2,GPIO1_tri_i_1,GPIO1_tri_i_0}),
+        .GPIO1_tri_o({GPIO1_tri_o_24,GPIO1_tri_o_23,GPIO1_tri_o_22,GPIO1_tri_o_21,GPIO1_tri_o_20,GPIO1_tri_o_19,GPIO1_tri_o_18,GPIO1_tri_o_17,GPIO1_tri_o_16,GPIO1_tri_o_15,GPIO1_tri_o_14,GPIO1_tri_o_13,GPIO1_tri_o_12,GPIO1_tri_o_11,GPIO1_tri_o_10,GPIO1_tri_o_9,GPIO1_tri_o_8,GPIO1_tri_o_7,GPIO1_tri_o_6,GPIO1_tri_o_5,GPIO1_tri_o_4,GPIO1_tri_o_3,GPIO1_tri_o_2,GPIO1_tri_o_1,GPIO1_tri_o_0}),
+        .GPIO1_tri_t({GPIO1_tri_t_24,GPIO1_tri_t_23,GPIO1_tri_t_22,GPIO1_tri_t_21,GPIO1_tri_t_20,GPIO1_tri_t_19,GPIO1_tri_t_18,GPIO1_tri_t_17,GPIO1_tri_t_16,GPIO1_tri_t_15,GPIO1_tri_t_14,GPIO1_tri_t_13,GPIO1_tri_t_12,GPIO1_tri_t_11,GPIO1_tri_t_10,GPIO1_tri_t_9,GPIO1_tri_t_8,GPIO1_tri_t_7,GPIO1_tri_t_6,GPIO1_tri_t_5,GPIO1_tri_t_4,GPIO1_tri_t_3,GPIO1_tri_t_2,GPIO1_tri_t_1,GPIO1_tri_t_0}),
+        .GPIO2_tri_i({GPIO2_tri_i_24,GPIO2_tri_i_23,GPIO2_tri_i_22,GPIO2_tri_i_21,GPIO2_tri_i_20,GPIO2_tri_i_19,GPIO2_tri_i_18,GPIO2_tri_i_17,GPIO2_tri_i_16,GPIO2_tri_i_15,GPIO2_tri_i_14,GPIO2_tri_i_13,GPIO2_tri_i_12,GPIO2_tri_i_11,GPIO2_tri_i_10,GPIO2_tri_i_9,GPIO2_tri_i_8,GPIO2_tri_i_7,GPIO2_tri_i_6,GPIO2_tri_i_5,GPIO2_tri_i_4,GPIO2_tri_i_3,GPIO2_tri_i_2,GPIO2_tri_i_1,GPIO2_tri_i_0}),
+        .GPIO2_tri_o({GPIO2_tri_o_24,GPIO2_tri_o_23,GPIO2_tri_o_22,GPIO2_tri_o_21,GPIO2_tri_o_20,GPIO2_tri_o_19,GPIO2_tri_o_18,GPIO2_tri_o_17,GPIO2_tri_o_16,GPIO2_tri_o_15,GPIO2_tri_o_14,GPIO2_tri_o_13,GPIO2_tri_o_12,GPIO2_tri_o_11,GPIO2_tri_o_10,GPIO2_tri_o_9,GPIO2_tri_o_8,GPIO2_tri_o_7,GPIO2_tri_o_6,GPIO2_tri_o_5,GPIO2_tri_o_4,GPIO2_tri_o_3,GPIO2_tri_o_2,GPIO2_tri_o_1,GPIO2_tri_o_0}),
+        .GPIO2_tri_t({GPIO2_tri_t_24,GPIO2_tri_t_23,GPIO2_tri_t_22,GPIO2_tri_t_21,GPIO2_tri_t_20,GPIO2_tri_t_19,GPIO2_tri_t_18,GPIO2_tri_t_17,GPIO2_tri_t_16,GPIO2_tri_t_15,GPIO2_tri_t_14,GPIO2_tri_t_13,GPIO2_tri_t_12,GPIO2_tri_t_11,GPIO2_tri_t_10,GPIO2_tri_t_9,GPIO2_tri_t_8,GPIO2_tri_t_7,GPIO2_tri_t_6,GPIO2_tri_t_5,GPIO2_tri_t_4,GPIO2_tri_t_3,GPIO2_tri_t_2,GPIO2_tri_t_1,GPIO2_tri_t_0}),
+        .GPIO3_tri_i({GPIO3_tri_i_24,GPIO3_tri_i_23,GPIO3_tri_i_22,GPIO3_tri_i_21,GPIO3_tri_i_20,GPIO3_tri_i_19,GPIO3_tri_i_18,GPIO3_tri_i_17,GPIO3_tri_i_16,GPIO3_tri_i_15,GPIO3_tri_i_14,GPIO3_tri_i_13,GPIO3_tri_i_12,GPIO3_tri_i_11,GPIO3_tri_i_10,GPIO3_tri_i_9,GPIO3_tri_i_8,GPIO3_tri_i_7,GPIO3_tri_i_6,GPIO3_tri_i_5,GPIO3_tri_i_4,GPIO3_tri_i_3,GPIO3_tri_i_2,GPIO3_tri_i_1,GPIO3_tri_i_0}),
+        .GPIO3_tri_o({GPIO3_tri_o_24,GPIO3_tri_o_23,GPIO3_tri_o_22,GPIO3_tri_o_21,GPIO3_tri_o_20,GPIO3_tri_o_19,GPIO3_tri_o_18,GPIO3_tri_o_17,GPIO3_tri_o_16,GPIO3_tri_o_15,GPIO3_tri_o_14,GPIO3_tri_o_13,GPIO3_tri_o_12,GPIO3_tri_o_11,GPIO3_tri_o_10,GPIO3_tri_o_9,GPIO3_tri_o_8,GPIO3_tri_o_7,GPIO3_tri_o_6,GPIO3_tri_o_5,GPIO3_tri_o_4,GPIO3_tri_o_3,GPIO3_tri_o_2,GPIO3_tri_o_1,GPIO3_tri_o_0}),
+        .GPIO3_tri_t({GPIO3_tri_t_24,GPIO3_tri_t_23,GPIO3_tri_t_22,GPIO3_tri_t_21,GPIO3_tri_t_20,GPIO3_tri_t_19,GPIO3_tri_t_18,GPIO3_tri_t_17,GPIO3_tri_t_16,GPIO3_tri_t_15,GPIO3_tri_t_14,GPIO3_tri_t_13,GPIO3_tri_t_12,GPIO3_tri_t_11,GPIO3_tri_t_10,GPIO3_tri_t_9,GPIO3_tri_t_8,GPIO3_tri_t_7,GPIO3_tri_t_6,GPIO3_tri_t_5,GPIO3_tri_t_4,GPIO3_tri_t_3,GPIO3_tri_t_2,GPIO3_tri_t_1,GPIO3_tri_t_0}),
+        .GPIO4_tri_i({GPIO4_tri_i_24,GPIO4_tri_i_23,GPIO4_tri_i_22,GPIO4_tri_i_21,GPIO4_tri_i_20,GPIO4_tri_i_19,GPIO4_tri_i_18,GPIO4_tri_i_17,GPIO4_tri_i_16,GPIO4_tri_i_15,GPIO4_tri_i_14,GPIO4_tri_i_13,GPIO4_tri_i_12,GPIO4_tri_i_11,GPIO4_tri_i_10,GPIO4_tri_i_9,GPIO4_tri_i_8,GPIO4_tri_i_7,GPIO4_tri_i_6,GPIO4_tri_i_5,GPIO4_tri_i_4,GPIO4_tri_i_3,GPIO4_tri_i_2,GPIO4_tri_i_1,GPIO4_tri_i_0}),
+        .GPIO4_tri_o({GPIO4_tri_o_24,GPIO4_tri_o_23,GPIO4_tri_o_22,GPIO4_tri_o_21,GPIO4_tri_o_20,GPIO4_tri_o_19,GPIO4_tri_o_18,GPIO4_tri_o_17,GPIO4_tri_o_16,GPIO4_tri_o_15,GPIO4_tri_o_14,GPIO4_tri_o_13,GPIO4_tri_o_12,GPIO4_tri_o_11,GPIO4_tri_o_10,GPIO4_tri_o_9,GPIO4_tri_o_8,GPIO4_tri_o_7,GPIO4_tri_o_6,GPIO4_tri_o_5,GPIO4_tri_o_4,GPIO4_tri_o_3,GPIO4_tri_o_2,GPIO4_tri_o_1,GPIO4_tri_o_0}),
+        .GPIO4_tri_t({GPIO4_tri_t_24,GPIO4_tri_t_23,GPIO4_tri_t_22,GPIO4_tri_t_21,GPIO4_tri_t_20,GPIO4_tri_t_19,GPIO4_tri_t_18,GPIO4_tri_t_17,GPIO4_tri_t_16,GPIO4_tri_t_15,GPIO4_tri_t_14,GPIO4_tri_t_13,GPIO4_tri_t_12,GPIO4_tri_t_11,GPIO4_tri_t_10,GPIO4_tri_t_9,GPIO4_tri_t_8,GPIO4_tri_t_7,GPIO4_tri_t_6,GPIO4_tri_t_5,GPIO4_tri_t_4,GPIO4_tri_t_3,GPIO4_tri_t_2,GPIO4_tri_t_1,GPIO4_tri_t_0}));
 endmodule
